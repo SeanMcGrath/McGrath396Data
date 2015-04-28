@@ -1,0 +1,132 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_entry_id
+ s_m_entry_name
+ s_j_Task
+ s_j_QM_Method
+ s_j_QM_Basis
+ i_j_Number_of_canonical_orbitals
+ r_j_Gas_Phase_Energy
+ r_j_HOMO
+ r_j_LUMO
+ s_m_job_name
+ s_m_Source_Path
+ s_m_Source_File
+ i_m_Source_File_Index
+ i_j_Geometry_convergence_category
+ r_j_Solution_Phase_Energy
+ r_j_Solvation_Energy_(kcal/mol)
+ r_j_Zero_Point_Energy_(kcal/mol)
+ r_j_Entropy_(cal/mol/K,_298K)
+ r_j_Enthalpy_(kcal/mol,_298K)
+ r_j_Free_Energy_(kcal/mol,_298K)
+ r_j_Total_Internal_Energy_at_298.15K_(au)
+ r_j_Total_Enthalpy_at_298.15K_(au)
+ r_j_Total_Free_Energy_at_298.15K_(au)
+ i_m_ct_format
+ :::
+ "2-Furancarboxaldehyde, ID: C98011" 
+  8 
+  98-01-1-2d.1 
+  "Single Point" 
+  DFT(b3lyp) 
+  6-311g** 
+  147
+  -341.293886236605
+  -0.245717612864237
+  0.00838254422783403
+  furfural_opt 
+  /home/angola/srmcgrat/Downloads 
+  98-01-1-2d.mol 
+  1
+  0
+  -341.408282198607
+  -3.66419003379977
+  69.2573608393488
+  65.8054288275306
+  2.63736125111338
+  -16.9825273538149
+  -341.180258889274
+  -341.179314703381
+  -341.210580986271
+  2
+ m_depend[18] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 20 s_j_Task 
+  2 20 s_j_QM_Method 
+  3 20 s_j_QM_Basis 
+  4 20 i_j_Number_of_canonical_orbitals 
+  5 20 r_j_Gas_Phase_Energy 
+  6 20 r_j_HOMO 
+  7 20 r_j_LUMO 
+  8 30 s_m_job_name 
+  9 20 i_j_Geometry_convergence_category 
+  10 20 r_j_Solution_Phase_Energy 
+  11 20 r_j_Solvation_Energy_(kcal/mol) 
+  12 20 r_j_Zero_Point_Energy_(kcal/mol) 
+  13 20 r_j_Entropy_(cal/mol/K,_298K) 
+  14 20 r_j_Enthalpy_(kcal/mol,_298K) 
+  15 20 r_j_Free_Energy_(kcal/mol,_298K) 
+  16 20 r_j_Total_Internal_Energy_at_298.15K_(au) 
+  17 20 r_j_Total_Enthalpy_at_298.15K_(au) 
+  18 20 r_j_Total_Free_Energy_at_298.15K_(au) 
+  :::
+ } 
+ m_atom[11] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  r_m_charge1
+  r_m_charge2
+  i_m_atomic_number
+  s_m_color_rgb
+  s_m_atom_name
+  r_j_ESP_Charges
+  :::
+  1 2 -0.141316 -0.181221 0.000000 900 2 0.45451 0.45451 6 A0A0A0  C1  0.454510321916909
+  2 16 -0.652616 0.636979 0.000000 900 70 -0.35030 -0.35030 8 FF2F2F  O2  -0.35029971045617
+  3 2 0.881384 0.125579 0.000000 900 2 -0.07618 -0.07618 6 A0A0A0  C3  -0.0761791331819422
+  4 2 -0.601516 -0.999321 0.000000 900 2 0.66446 0.66446 6 A0A0A0  C4  0.664458064138517
+  5 2 -0.090116 1.455079 0.000000 900 2 0.40874 0.40874 6 A0A0A0  C5  0.408743621621164
+  6 2 0.881384 1.097179 0.000000 900 2 -0.23821 -0.23821 6 A0A0A0  C6  -0.238212770342089
+  7 15 -0.141316 -1.919721 0.000000 900 70 -0.73675 -0.73675 8 FF2F2F  O7  -0.736748249606963
+  8 41 -0.273501 2.519395 0.000000 900 21 -0.01755 -0.01755 1 FFFFFF  H8  -0.017549536545509
+  9 41 1.816691 1.637179 0.000000 900 21 0.06216 0.06216 1 FFFFFF  H9  0.0621631011477438
+  10 41 1.667362 -0.615123 0.000000 900 21 0.01478 0.01478 1 FFFFFF  H10  0.0147839379422124
+  11 41 -1.681449 -1.011408 0.000000 900 21 -0.18567 -0.18567 1 FFFFFF  H11  -0.185669646633874
+  :::
+ } 
+ m_bond[11] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 3 2
+  3 1 4 1
+  4 2 5 1
+  5 3 6 1
+  6 3 10 1
+  7 4 7 2
+  8 4 11 1
+  9 5 6 2
+  10 5 8 1
+  11 6 9 1
+  :::
+ } 
+} 
+

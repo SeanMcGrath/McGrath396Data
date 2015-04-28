@@ -1,0 +1,66 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_entry_id
+ s_m_entry_name
+ i_m_ct_format
+ :::
+ Benzene 
+  2 
+  Benzene 
+  2
+ m_atom[12] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  s_m_pdb_residue_name
+  s_m_grow_name
+  i_m_atomic_number
+  s_m_color_rgb
+  s_m_atom_name
+  :::
+  1 2 0.498595 0.658838 1.759203 1 2 "    " "  n1" 6 A0A0A0  C1 
+  2 2 -0.203705 1.875238 1.759203 1 2 "    " "  f1" 6 A0A0A0  C2 
+  3 2 -1.608205 1.875238 1.759203 1 2 "    " "  c3" 6 A0A0A0  C3 
+  4 2 -2.310405 0.658838 1.759203 1 2 "    " "  c1" 6 A0A0A0  C4 
+  5 2 -1.608205 -0.557562 1.759203 1 2 "    " "    " 6 A0A0A0  C5 
+  6 2 -0.203605 -0.557562 1.759203 1 2 "    " "  n3" 6 A0A0A0  C6 
+  7 41 1.601995 0.658838 1.759203 1 21 "    " "  n2" 1 FFFFFF  H7 
+  8 41 0.348095 2.830838 1.759203 1 21 "    " "    " 1 FFFFFF  H8 
+  9 41 -2.159905 2.830838 1.759203 1 21 "    " "    " 1 FFFFFF  H9 
+  10 41 -3.413805 0.658838 1.759203 1 21 "    " "  c2" 1 FFFFFF  H10 
+  11 41 -2.159905 -1.513062 1.759203 1 21 "    " "    " 1 FFFFFF  H11 
+  12 41 0.348095 -1.513162 1.759203 1 21 "    " "    " 1 FFFFFF  H12 
+  :::
+ } 
+ m_bond[12] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 2
+  2 1 6 1
+  3 1 7 1
+  4 2 3 1
+  5 2 8 1
+  6 3 4 2
+  7 3 9 1
+  8 4 5 1
+  9 4 10 1
+  10 5 6 2
+  11 5 11 1
+  12 6 12 1
+  :::
+ } 
+} 
+

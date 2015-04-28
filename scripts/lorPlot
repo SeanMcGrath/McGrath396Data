@@ -1,0 +1,63 @@
+#!/usr/bin/env python
+
+from csv import reader
+from argparse import ArgumentParser
+from numpy import linspace
+import matplotlib.pyplot as plt, seaborn as sns
+import sys
+
+def lorentzian(x,amp, ctr, width):
+    numerator =  (width**2 )
+    denominator = ( x - ctr )**2 + width**2
+    return amp*(numerator/denominator)
+
+def lorentzianSum(x, freqs, amps, width):
+	return sum([lorentzian(x, amp, freq, width) for freq, amp in zip(freqs, amps)])
+
+def main(args):
+
+	parser = ArgumentParser(description = 'Fit a lorentzian curve to simulated Raman spectral data.')
+	parser.add_argument('file', type=str)
+	parser.add_argument('-p','--points', type=int, help='Number of points in output plot - sets resolution.')
+	parser.add_argument('-w', '--width', type=float, help='FWHM of each lorentzian in the plot.')
+	parser.add_argument('-t', '--title', type=str, help='Title of resulting plot.')
+	parser.add_argument('-c', '--color', type=str, help='Color code for line in resulting plot.')
+	parser.add_argument('--set-context', type=str, dest='context', help='Seaborn plot formatting context.')
+	args = parser.parse_args(args)
+
+	try:
+		sns.set_context(args.context)
+	except:
+		print('{} is not a valid Seaborn context.'.format(args.context))
+
+	try:
+		file = open(args.file, 'r')
+		fileReader = reader(file)
+	except:
+		print('{} is not a valid file.'.format(args.file))
+		return 2
+
+	try:
+		headers = next(fileReader)
+		data = [(float(row[0]), float(row[1])) for row in fileReader if row[0] not in ['Frequency']]
+	except Exception as e:
+		print('{} is not formatted as a comma-separated list of numbers only.'.format(args.file))
+		return 2
+
+	frequencies = [tup[0] for tup in data]
+	intensities = [tup[1] for tup in data]
+
+	xData = linspace(0, max(frequencies), args.points or 10000)
+	if args.color:
+		plt.plot(xData, lorentzianSum(xData, frequencies, intensities, args.width or 20), color=args.color)
+	else:
+		plt.plot(xData, lorentzianSum(xData, frequencies, intensities, args.width or 20))
+	plt.xlabel(headers[0])
+	plt.ylabel(headers[1])
+	if args.title:
+		plt.title(args.title)
+	plt.show()
+	return 0
+	
+if __name__ == '__main__':
+	sys.exit(main(sys.argv[1:]))

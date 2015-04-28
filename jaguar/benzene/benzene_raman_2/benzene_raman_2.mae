@@ -1,0 +1,116 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_ct { 
+ s_m_title
+ s_m_entry_id
+ s_m_entry_name
+ s_j_Task
+ s_j_QM_Method
+ s_j_QM_Basis
+ i_j_Number_of_canonical_orbitals
+ r_j_Gas_Phase_Energy
+ r_j_HOMO
+ r_j_LUMO
+ s_m_job_name
+ r_j_Zero_Point_Energy_(kcal/mol)
+ r_j_Entropy_(cal/mol/K,_298K)
+ r_j_Enthalpy_(kcal/mol,_298K)
+ r_j_Free_Energy_(kcal/mol,_298K)
+ r_j_Total_Internal_Energy_at_298.15K_(au)
+ r_j_Total_Enthalpy_at_298.15K_(au)
+ r_j_Total_Free_Energy_at_298.15K_(au)
+ i_m_ct_format
+ :::
+ Benzene 
+  4 
+  Benzene 
+  "Single Point" 
+  DFT(b3lyp) 
+  6-31g** 
+  120
+  -231.648148697079
+  -0.203418985931252
+  -0.0778636783542312
+  benzene_raman 
+  43.7787028155784
+  75.3730274530467
+  4.65104078246593
+  -17.82142735266
+  -231.571915173449
+  -231.570970987557
+  -231.606783145316
+  2
+ m_depend[15] { 
+  # First column is dependency index #
+  i_m_depend_dependency
+  s_m_depend_property
+  :::
+  1 20 s_j_Task 
+  2 20 s_j_QM_Method 
+  3 20 s_j_QM_Basis 
+  4 20 i_j_Number_of_canonical_orbitals 
+  5 20 r_j_Gas_Phase_Energy 
+  6 20 r_j_HOMO 
+  7 20 r_j_LUMO 
+  8 30 s_m_job_name 
+  9 20 r_j_Zero_Point_Energy_(kcal/mol) 
+  10 20 r_j_Entropy_(cal/mol/K,_298K) 
+  11 20 r_j_Enthalpy_(kcal/mol,_298K) 
+  12 20 r_j_Free_Energy_(kcal/mol,_298K) 
+  13 20 r_j_Total_Internal_Energy_at_298.15K_(au) 
+  14 20 r_j_Total_Enthalpy_at_298.15K_(au) 
+  15 20 r_j_Total_Free_Energy_at_298.15K_(au) 
+  :::
+ } 
+ m_atom[12] { 
+  # First column is atom index #
+  i_m_mmod_type
+  r_m_x_coord
+  r_m_y_coord
+  r_m_z_coord
+  i_m_residue_number
+  i_m_color
+  i_m_atomic_number
+  s_m_color_rgb
+  s_m_atom_name
+  :::
+  1 2 0.000000 0.000000 1.898697 1 2 6 A0A0A0  C2 
+  2 2 0.000000 1.644287 0.949695 1 2 6 A0A0A0  C3 
+  3 2 0.000000 1.644287 -0.949695 1 2 6 A0A0A0  C4 
+  4 2 0.000000 0.000000 -1.898697 1 2 6 A0A0A0  C5 
+  5 2 0.000000 -1.644287 -0.949695 1 2 6 A0A0A0  C6 
+  6 2 0.000000 -1.644287 0.949695 1 2 6 A0A0A0  C7 
+  7 41 0.000000 0.000000 2.969669 1 21 1 FFFFFF  H7 
+  8 41 0.000000 2.572028 1.485324 1 21 1 FFFFFF  H8 
+  9 41 0.000000 2.572028 -1.485324 1 21 1 FFFFFF  H9 
+  10 41 0.000000 0.000000 -2.969669 1 21 1 FFFFFF  H10 
+  11 41 0.000000 -2.572028 -1.485324 1 21 1 FFFFFF  H11 
+  12 41 0.000000 -2.572028 1.485324 1 21 1 FFFFFF  H12 
+  :::
+ } 
+ m_bond[12] { 
+  # First column is bond index #
+  i_m_from
+  i_m_to
+  i_m_order
+  :::
+  1 1 2 1
+  2 1 6 2
+  3 1 7 1
+  4 2 3 2
+  5 2 8 1
+  6 3 4 1
+  7 3 9 1
+  8 4 5 2
+  9 4 10 1
+  10 5 6 1
+  11 5 11 1
+  12 6 12 1
+  :::
+ } 
+} 
+

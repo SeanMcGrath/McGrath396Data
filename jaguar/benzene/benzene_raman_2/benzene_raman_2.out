@@ -1,0 +1,3082 @@
+Job benzene_raman_2 started on alcatraz.chem.umass.edu at Wed Feb  4 15:27:27 2015
+jobid: alcatraz-0-54d280ae
+
+  +--------------------------------------------------------------------+
+  |  Jaguar version 8.5, release  13                                   |
+  |                                                                    |
+  |  Copyright Schrodinger, Inc.                                       |
+  |  All Rights Reserved.                                              |
+  |                                                                    |
+  |  The following have contributed to Jaguar (listed alphabetically): |
+  |  Mike Beachy, Art Bochevarov, Dale Braden, Yixiang Cao,            |
+  |  Chris Cortis, Rich Friesner, Bill Goddard, Hod Greeley,           |
+  |  Tom Hughes, Jean-Marc Langlois, Daniel Mainz, Rob Murphy,         |
+  |  Dean Philipp, Tom Pollard, Murco Ringnalda.                       |
+  |                                                                    |
+  |  Use of this program should be acknowledged in publications as:    |
+  |                                                                    |
+  |  Jaguar, version 8.5, Schrodinger, Inc., New York, NY, 2014.       |
+  |                                                                    |
+  |  A. D. Bochevarov, E. Harder, T. F. Hughes, J. R. Greenwood,       |
+  |  D. A. Braden, D. M. Philipp, D. Rinaldo, M. D. Halls,             |
+  |  J. Zhang, R. A. Friesner, "Jaguar: A High-Performance Quantum     |
+  |  Chemistry Software Program with Strengths in Life and Materials   |
+  |  Sciences", Int. J. Quantum Chem., 2013, 113(18), 2110-2142.       |
+  +--------------------------------------------------------------------+
+  
+  start of program pre
+  
+  Job name: benzene_raman_2
+  Executables used: /usr/local/schrodinger2014-3/jaguar-v85013/bin/Linux-x86_64
+  Temporary files : /home/angola/srmcgrat/.schrodinger/tmp/benzene_raman_2
+  Maestro file (input):  benzene_raman_2.mae
+  Maestro file (output): benzene_raman_2.01.mae
+  
+  
+  basis set:             6-31g**         
+  net molecular charge:    0
+  multiplicity:            1
+  
+  number of basis functions....          120
+  
+ Input geometry:
+                                   angstroms
+  atom               x                 y                 z
+  C2            0.0000000000      0.0000000000      1.8986970000 
+  C3            0.0000000000      1.6442870000      0.9496950000 
+  C4            0.0000000000      1.6442870000     -0.9496950000 
+  C5            0.0000000000      0.0000000000     -1.8986970000 
+  C6            0.0000000000     -1.6442870000     -0.9496950000 
+  C7            0.0000000000     -1.6442870000      0.9496950000 
+  H7            0.0000000000      0.0000000000      2.9696690000 
+  H8            0.0000000000      2.5720280000      1.4853240000 
+  H9            0.0000000000      2.5720280000     -1.4853240000 
+  H10           0.0000000000      0.0000000000     -2.9696690000 
+  H11           0.0000000000     -2.5720280000     -1.4853240000 
+  H12           0.0000000000     -2.5720280000      1.4853240000 
+   
+  principal moments of inertia:
+        amu*angstrom^2:      156.44500      156.48308      312.92808
+                g*cm^2: 2.59783002E-38 2.59846242E-38 5.19629244E-38
+   
+  rotational constants:
+               cm^(-1):      0.10775435      0.10772812      0.05387062
+                   GHz:      3.23039411      3.22960792      1.61500048
+   
+  Molecular weight:      78.05 amu
+   
+  Stoichiometry: C6H6
+  Molecular Point Group: D2h     
+  Point Group used: C1 (symmetry turned off)
+  
+  nuclear repulsion energy.......     157.242055273 hartrees
+ 
+ Non-default options chosen:
+   SCF calculation type: DFT(b3lyp)                  
+   DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+   Vibrational frequencies and related properties will be computed
+      from analytic second derivatives
+   IR intensities will be computed
+   Store KE, NAI, and pt. chg. terms separately
+  
+ Temporary integer options set:
+     73=  2
+  
+  Peak memory usage:    517 Mb
+  
+  end of program pre
+   
+ Time(pre)  user:        0.1  user+sys:        0.1  wallclock:        1.0
+  
+  start of program onee
+  
+  smallest eigenvalue of S:    8.522E-03
+  number of canonical orbitals.....          120
+  Peak memory usage:    660 Mb
+  
+  end of program onee
+   
+ Time(onee)  user:        0.1  user+sys:        0.1  wallclock:        3.7
+  
+  start of program hfig
+  
+  initial wavefunction generated automatically from atomic wavefunctions
+ 
+  Irreducible     Total no   No of occupied orbitals 
+  representation  orbitals   Shell_1  Shell_2    ...
+  No Symm          120         21
+  ------------------------
+  Orbital occupation/shell    1.000
+ 
+  Peak memory usage:    600 Mb
+  
+  end of program hfig
+   
+ Time(hfig)  user:        0.1  user+sys:        0.1  wallclock:        0.6
+  
+  start of program probe
+  
+  Peak memory usage:    600 Mb
+  
+  end of program probe
+   
+ Time(probe)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program grid
+  
+  
+   grid     grid set  grid #  grid sym
+  ------    --------  ------  --------
+  coarse        0        0        1
+  medium        2        1        1
+  fine          0        0        1
+  ultrafine     4        2        1
+  charge        0        0        1
+  gradient      4        2        1
+  density       0        0        1
+  DFT-fine    -11        3        1
+  DFT-med.    -10        4        1
+  DFT-grad    -12        5        1
+  DFT-der2     -8        6        1
+  DFT-cphf     -9        7        1
+  LMP2-enrg     4        2        1
+  LMP2-grad     2        1        1
+  DFT-cphf2   -15        8        1
+  PBF-dens      0        0        1
+  plotting      0        0        1
+  Rel-grad    -17        0        1
+  
+   
+  number of gridpoints: 
+     atom        C2       C3       C4       C5       C6       C7       H7
+  grid # 1      103      103      103      103      103      103      118
+  grid # 2      399      399      399      399      399      399      461
+  grid # 3     4304     4304     4304     4304     4304     4304     4304
+  grid # 4     1192     1192     1192     1192     1192     1192     1192
+  grid # 5     5226     5226     5226     5226     5226     5226     5226
+  grid # 6    12650    12650    12650    12650    12650    12650    13718
+  grid # 7      688      688      688      688      688      688      744
+  grid # 8      358      358      358      358      358      358      382
+   
+  number of gridpoints: 
+     atom        H8       H9      H10      H11      H12    total
+  grid # 1      118      118      118      118      118     1326
+  grid # 2      461      461      461      461      461     5160
+  grid # 3     4304     4304     4304     4304     4304    51648
+  grid # 4     1192     1192     1192     1192     1192    14304
+  grid # 5     5226     5226     5226     5226     5226    62712
+  grid # 6    13718    13718    13718    13718    13718   158208
+  grid # 7      744      744      744      744      744     8592
+  grid # 8      382      382      382      382      382     4440
+   
+  Peak memory usage:    637 Mb
+  
+  end of program grid
+   
+ Time(grid)  user:        1.1  user+sys:        1.1  wallclock:      474.3
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        5.1
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.06429786194           4.3E-03  1.4E-01
+etot    2  Y  Y  6  M    -231.57096267183  5.1E-01  3.2E-03  3.5E-02
+etot    3  Y  Y  6  M    -231.62075021336  5.0E-02  9.2E-04  1.8E-02
+etot    4  N  Y  2  U    -231.62940480895  8.7E-03  2.7E-04  2.0E-02
+etot    5  Y  Y  6  M    -231.63006767113  6.6E-04  3.4E-04  1.1E-02
+etot    6  Y  Y  6  M    -231.62941234530 -6.6E-04  1.8E-04  6.6E-03
+etot    7  Y  Y  6  M    -231.63017801789  7.7E-04  4.9E-05  1.7E-03
+etot    8  N  Y  2  U    -231.63054349272  3.7E-04  4.1E-06  7.8E-05
+etot    9  N  N  2  U    -231.63054377575  2.8E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59668932996
+   (F)    Electron-nuclear...........    -848.24912821935
+   (H)    Kinetic....................     226.65243888939
+   (I)  Total two-electron terms.....     232.72409028128
+   (J)    Coulomb....................     266.40191475837
+   (K)    Exchange+Correlation.......     -33.67782447710
+   (L)  Electronic energy............    -388.87259904869  (E+I)
+   (M)  -V/T.........................       2.02196360609  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.63054377575  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.63054377575 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20416
+ LUMO energy:    -0.07583
+ 
+  Orbital energies (hartrees): 
+   -10.27609   -10.27608   -10.27604   -10.27600   -10.27594   -10.27594
+    -0.69602    -0.66133    -0.66121    -0.59361    -0.59356    -0.55270
+    -0.42977    -0.38135    -0.38124    -0.32588    -0.32427    -0.32411
+    -0.25362    -0.20430    -0.20416    -0.07583    -0.07565    -0.01341
+     0.00115     0.00152     0.00171     0.08560     0.08586     0.11745
+     0.15297
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.0  user+sys:        3.0  wallclock:       24.9
+  
+  start of program cutabab2
+  
+  Peak memory usage:    610 Mb
+  
+  end of program cutabab2
+   
+ Time(cutabab2)  user:        0.1  user+sys:        0.1  wallclock:        0.6
+  
+  start of program der2a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der2a
+   
+ Time(der2a)  user:        0.2  user+sys:        0.2  wallclock:        0.6
+  
+  start of program der2b
+  
+  Peak memory usage:    810 Mb
+  
+  end of program der2b
+   
+ Time(der2b)  user:       11.6  user+sys:       11.6  wallclock:       12.1
+  
+  start of program der2nda
+  
+ 
+  Peak memory usage:    656 Mb
+  
+  end of program der2nda
+   
+ Time(der2nda)  user:        0.2  user+sys:        0.2  wallclock:        0.6
+  
+  start of program der2ndb
+  
+  Peak memory usage:    628 Mb
+  
+  end of program der2ndb
+   
+ Time(der2ndb)  user:       28.2  user+sys:       28.2  wallclock:       28.8
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.5
+  
+  start of program cphfa
+  
+       1  vectors produced in CPHF
+  
+     v    i  j  k  i  g
+     e    t  c  c  c  r
+     c    e  o  o  u  i
+     t    r  r  r  t  d       RMS  
+  
+     1    1  0  0  6  M     3.3E-02
+     1    2  0  0  6  M     4.9E-03
+     1    3  0  0  6  M     9.7E-04
+     1    4  0  0  6  M     2.4E-04
+     1    5  0  0  6  M     9.2E-05
+     1    6  0  0  6  M     9.4E-06
+  
+  
+  Atomic Polar Tensors (au): Total
+  =========================
+  
+  APT for atom C2      
+  --------------------------------------
+       -0.1619       0.0000       0.0000
+       -0.0000       0.0414      -0.0000
+       -0.0000      -0.0000      -0.0511
+  --------------------------------------
+  
+  APT for atom C3      
+  --------------------------------------
+       -0.1620      -0.0000       0.0000
+        0.0000      -0.0278      -0.0405
+        0.0000      -0.0402       0.0186
+  --------------------------------------
+  
+  APT for atom C4      
+  --------------------------------------
+       -0.1620      -0.0000      -0.0000
+       -0.0000      -0.0278       0.0405
+       -0.0000       0.0402       0.0186
+  --------------------------------------
+  
+  APT for atom C5      
+  --------------------------------------
+       -0.1619       0.0000      -0.0000
+        0.0000       0.0414      -0.0000
+       -0.0000       0.0000      -0.0511
+  --------------------------------------
+  
+  APT for atom C6      
+  --------------------------------------
+       -0.1620      -0.0000       0.0000
+        0.0000      -0.0278      -0.0405
+        0.0000      -0.0402       0.0186
+  --------------------------------------
+  
+  APT for atom C7      
+  --------------------------------------
+       -0.1620       0.0000      -0.0000
+       -0.0000      -0.0278       0.0405
+       -0.0000       0.0402       0.0186
+  --------------------------------------
+  
+  APT for atom H7      
+  --------------------------------------
+        0.1620      -0.0000       0.0000
+       -0.0000       0.0123       0.0000
+        0.0000       0.0000      -0.0028
+  --------------------------------------
+  
+  APT for atom H8      
+  --------------------------------------
+        0.1620       0.0000       0.0000
+        0.0000       0.0009      -0.0065
+       -0.0000      -0.0066       0.0084
+  --------------------------------------
+  
+  APT for atom H9      
+  --------------------------------------
+        0.1620       0.0000       0.0000
+        0.0000       0.0009       0.0065
+        0.0000       0.0066       0.0084
+  --------------------------------------
+  
+  APT for atom H10     
+  --------------------------------------
+        0.1620       0.0000       0.0000
+       -0.0000       0.0123      -0.0000
+        0.0000      -0.0000      -0.0028
+  --------------------------------------
+  
+  APT for atom H11     
+  --------------------------------------
+        0.1620       0.0000      -0.0000
+        0.0000       0.0009      -0.0065
+       -0.0000      -0.0066       0.0084
+  --------------------------------------
+  
+  APT for atom H12     
+  --------------------------------------
+        0.1620      -0.0000       0.0000
+        0.0000       0.0009       0.0065
+        0.0000       0.0066       0.0084
+  --------------------------------------
+  
+  Peak memory usage:    748 Mb
+  
+  end of program cphfa
+   
+ Time(cphfa)  user:       29.4  user+sys:       29.4  wallclock:       43.0
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.8
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62889954382           3.5E-04  1.3E-02
+etot    2  Y  Y  6  M    -231.62906751555  1.7E-04  2.6E-05  3.7E-04
+etot    3  N  Y  2  U    -231.62994429808  8.8E-04  8.6E-05  1.5E-02
+etot    4  Y  Y  6  M    -231.63014246643  2.0E-04  1.9E-04  1.1E-02
+etot    5  Y  Y  6  M    -231.63035205143  2.1E-04  2.4E-05  3.3E-03
+etot    6  N  Y  2  U    -231.63052341034  1.7E-04  4.5E-06  2.4E-03
+etot    7  N  N  2  U    -231.63052586197  2.5E-06  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59423421846
+   (F)    Electron-nuclear...........    -848.23862784710
+   (H)    Kinetic....................     226.64439362864
+   (I)  Total two-electron terms.....     232.72165308356
+   (J)    Coulomb....................     266.39910346442
+   (K)    Exchange+Correlation.......     -33.67745038086
+   (L)  Electronic energy............    -388.87258113490  (E+I)
+   (M)  -V/T.........................       2.02199980398  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.63052586197  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.63052586197 hartrees   iterations:   7
+  
+ 
+ HOMO energy:    -0.20419
+ LUMO energy:    -0.07586
+ 
+  Orbital energies (hartrees): 
+   -10.27625   -10.27625   -10.27623   -10.27619   -10.27618   -10.27617
+    -0.69603    -0.66134    -0.66121    -0.59359    -0.59356    -0.55267
+    -0.42979    -0.38136    -0.38126    -0.32589    -0.32428    -0.32412
+    -0.25366    -0.20434    -0.20419    -0.07586    -0.07569    -0.01345
+     0.00110     0.00149     0.00168     0.08559     0.08585     0.11745
+     0.15298
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        2.7  user+sys:        2.7  wallclock:       22.6
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.9
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.036788E-07   7.133638E-07  -1.515948E-01
+    2 C3          2.438810E-08  -1.311415E-01  -7.563391E-02
+    3 C4          9.484596E-08  -1.311423E-01   7.563486E-02
+    4 C5          1.142038E-07   7.211799E-07   1.515929E-01
+    5 C6          1.762433E-08   1.311418E-01   7.563777E-02
+    6 C7         -1.188504E-07   1.311410E-01  -7.563582E-02
+    7 H7          5.039561E-08   5.430722E-07   1.079983E-02
+    8 H8          1.967908E-08   9.162464E-03   5.277484E-03
+    9 H9         -1.061503E-07   9.163357E-03  -5.278318E-03
+   10 H10         5.448292E-08   5.610661E-07  -1.079931E-02
+   11 H11         1.214664E-08  -9.163641E-03  -5.277376E-03
+   12 H12         5.351581E-08  -9.162647E-03   5.276811E-03
+ -------------   -------------  -------------  -------------
+     total        4.199604E-07   1.101006E-06   1.343402E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.02400 Ey= 0.00000 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.0
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898814878           1.3E-03  1.8E-02
+etot    2  Y  Y  6  M    -231.63434634876  5.4E-03  3.7E-04  1.1E-02
+etot    3  N  Y  2  U    -231.63687027340  2.5E-03  1.1E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.63711713651  2.5E-04  2.7E-04  1.0E-02
+etot    5  Y  Y  6  M    -231.63727626619  1.6E-04  2.4E-05  2.9E-04
+etot    6  N  Y  2  U    -231.63747466543  2.0E-04  1.7E-05  5.5E-04
+etot    7  N  Y  2  U    -231.63748212742  7.5E-06  3.3E-06  6.1E-05
+etot    8  N  N  2  U    -231.63748219330  6.6E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59692505019
+   (F)    Electron-nuclear...........    -848.23273770119
+   (H)    Kinetic....................     226.64968770510
+   (I)  Total two-electron terms.....     232.71738758395
+   (J)    Coulomb....................     266.39421350284
+   (K)    Exchange+Correlation.......     -33.67682591889
+   (L)  Electronic energy............    -388.87953746624  (E+I)
+   (M)  -V/T.........................       2.02194540608  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.63748219330  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.63748219330 hartrees   iterations:   8
+  
+ 
+ HOMO energy:    -0.20420
+ LUMO energy:    -0.07623
+ 
+  Orbital energies (hartrees): 
+   -10.27649   -10.27641   -10.27640   -10.27638   -10.27637   -10.27636
+    -0.69661    -0.66192    -0.66174    -0.59409    -0.59408    -0.55315
+    -0.43000    -0.38163    -0.38147    -0.32609    -0.32452    -0.32435
+    -0.25365    -0.20440    -0.20420    -0.07623    -0.07610    -0.01609
+     0.00159     0.00177     0.00337     0.08540     0.08562     0.11727
+     0.15282
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.4  user+sys:        3.4  wallclock:       25.6
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.2
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2         -3.892276E-03   6.128113E-07  -1.516224E-01
+    2 C3         -3.918177E-03  -1.311832E-01  -7.562929E-02
+    3 C4         -3.911238E-03  -1.311706E-01   7.562142E-02
+    4 C5         -3.899270E-03   7.086259E-07   1.516370E-01
+    5 C6         -3.911358E-03   1.311702E-01   7.562442E-02
+    6 C7         -3.918336E-03   1.311828E-01  -7.563119E-02
+    7 H7          3.895848E-03   5.454100E-07   1.086212E-02
+    8 H8          3.896974E-03   9.239690E-03   5.328069E-03
+    9 H9          3.896297E-03   9.228659E-03  -5.321849E-03
+   10 H10         3.896409E-03   5.899829E-07  -1.087484E-02
+   11 H11         3.896490E-03  -9.228968E-03  -5.320827E-03
+   12 H12         3.897060E-03  -9.240049E-03   5.327424E-03
+ -------------   -------------  -------------  -------------
+     total       -7.157749E-05   1.080175E-06   1.127859E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex=-0.02400 Ey= 0.00000 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.6
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        4.7
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898812684           1.3E-03  1.8E-02
+etot    2  Y  Y  6  M    -231.63434634081  5.4E-03  3.7E-04  1.1E-02
+etot    3  N  Y  2  U    -231.63687012186  2.5E-03  1.1E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.63711694760  2.5E-04  2.7E-04  1.0E-02
+etot    5  Y  Y  6  M    -231.63727606576  1.6E-04  2.4E-05  2.9E-04
+etot    6  N  Y  2  U    -231.63747453874  2.0E-04  1.7E-05  5.5E-04
+etot    7  N  Y  2  U    -231.63748199542  7.5E-06  3.3E-06  6.1E-05
+etot    8  N  N  2  U    -231.63748206138  6.6E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59692568744
+   (F)    Electron-nuclear...........    -848.23273862427
+   (H)    Kinetic....................     226.64968796784
+   (I)  Total two-electron terms.....     232.71738835312
+   (J)    Coulomb....................     266.39421437139
+   (K)    Exchange+Correlation.......     -33.67682601827
+   (L)  Electronic energy............    -388.87953733432  (E+I)
+   (M)  -V/T.........................       2.02194540441  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.63748206138  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.63748206138 hartrees   iterations:   8
+  
+ 
+ HOMO energy:    -0.20420
+ LUMO energy:    -0.07623
+ 
+  Orbital energies (hartrees): 
+   -10.27649   -10.27641   -10.27640   -10.27638   -10.27637   -10.27636
+    -0.69661    -0.66192    -0.66174    -0.59409    -0.59408    -0.55315
+    -0.43000    -0.38163    -0.38147    -0.32609    -0.32452    -0.32435
+    -0.25365    -0.20440    -0.20420    -0.07623    -0.07610    -0.01609
+     0.00159     0.00177     0.00337     0.08540     0.08562     0.11727
+     0.15282
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.4  user+sys:        3.4  wallclock:       25.6
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.6
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          3.892747E-03   6.295411E-07  -1.516223E-01
+    2 C3          3.918239E-03  -1.311832E-01  -7.562929E-02
+    3 C4          3.911465E-03  -1.311706E-01   7.562144E-02
+    4 C5          3.899463E-03   7.018019E-07   1.516371E-01
+    5 C6          3.911395E-03   1.311702E-01   7.562435E-02
+    6 C7          3.918026E-03   1.311828E-01  -7.563118E-02
+    7 H7         -3.895764E-03   5.517960E-07   1.086212E-02
+    8 H8         -3.896950E-03   9.239677E-03   5.328078E-03
+    9 H9         -3.896533E-03   9.228645E-03  -5.321852E-03
+   10 H10        -3.896291E-03   5.941914E-07  -1.087484E-02
+   11 H11        -3.896465E-03  -9.228968E-03  -5.320819E-03
+   12 H12        -3.896930E-03  -9.240051E-03   5.327418E-03
+ -------------   -------------  -------------  -------------
+     total        7.240206E-05   1.043794E-06   1.323685E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.5
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey= 0.02400 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.9
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898760640           5.1E-03  3.8E-02
+etot    2  Y  Y  6  M    -231.46673427697 -1.6E-01  2.8E-03  9.6E-02
+etot    3  N  Y  2  U    -231.66234872424  2.0E-01  5.1E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.66540400561  3.1E-03  1.9E-04  4.3E-03
+etot    5  Y  Y  6  M    -231.66545190765  4.8E-05  1.3E-04  2.7E-03
+etot    6  N  Y  2  U    -231.66570913194  2.6E-04  5.7E-05  2.0E-03
+etot    7  Y  Y  6  M    -231.66579464138  8.6E-05  7.7E-06  1.7E-04
+etot    8  N  Y  2  U    -231.66578674404 -7.9E-06  2.4E-06  4.7E-05
+etot    9  N  N  2  U    -231.66578679985  5.6E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.57558745151
+   (F)    Electron-nuclear...........    -848.16421690254
+   (H)    Kinetic....................     226.65922705367
+   (I)  Total two-electron terms.....     232.66774537873
+   (J)    Coulomb....................     266.34276808929
+   (K)    Exchange+Correlation.......     -33.67502271057
+   (L)  Electronic energy............    -388.90784207278  (E+I)
+   (M)  -V/T.........................       2.02177701834  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.66578679985  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.66578679985 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20265
+ LUMO energy:    -0.07992
+ 
+  Orbital energies (hartrees): 
+   -10.28349   -10.28339   -10.27793   -10.27789   -10.27355   -10.27352
+    -0.70441    -0.66577    -0.66023    -0.60255    -0.59348    -0.54625
+    -0.43573    -0.38421    -0.38020    -0.33396    -0.32474    -0.31907
+    -0.25954    -0.20726    -0.20265    -0.07992    -0.07607    -0.01782
+    -0.01205    -0.00268     0.00925     0.07203     0.08290     0.08700
+     0.12357
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.3
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.5
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.835765E-07   1.111381E-03  -1.511258E-01
+    2 C3          1.205908E-08  -1.311817E-01  -7.582453E-02
+    3 C4          8.187758E-08  -1.311760E-01   7.582195E-02
+    4 C5          1.186897E-07   1.109657E-03   1.511304E-01
+    5 C6         -1.078939E-08   1.299480E-01   7.384147E-02
+    6 C7         -1.329536E-07   1.299504E-01  -7.384322E-02
+    7 H7          1.641400E-08   2.335595E-04   1.088368E-02
+    8 H8          2.362717E-08   1.236012E-02   6.503501E-03
+    9 H9         -1.080813E-07   1.235632E-02  -6.501554E-03
+   10 H10         5.037594E-08   2.337909E-04  -1.088798E-02
+   11 H11         2.454528E-08  -1.245414E-02  -6.711597E-03
+   12 H12         5.791117E-08  -1.245749E-02   6.713815E-03
+ -------------   -------------  -------------  -------------
+     total        4.172521E-07   3.387159E-05   2.169005E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.5
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey=-0.02400 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        5.3
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898866922           5.1E-03  3.8E-02
+etot    2  Y  Y  6  M    -231.46674262286 -1.6E-01  2.8E-03  9.6E-02
+etot    3  N  Y  2  U    -231.66234917856  2.0E-01  5.1E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.66540429272  3.1E-03  1.9E-04  4.3E-03
+etot    5  Y  Y  6  M    -231.66545217924  4.8E-05  1.3E-04  2.7E-03
+etot    6  N  Y  2  U    -231.66570950617  2.6E-04  5.7E-05  2.0E-03
+etot    7  Y  Y  6  M    -231.66579501171  8.6E-05  7.7E-06  1.7E-04
+etot    8  N  Y  2  U    -231.66578721096 -7.8E-06  2.4E-06  4.7E-05
+etot    9  N  N  2  U    -231.66578726789  5.7E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.57556567316
+   (F)    Electron-nuclear...........    -848.16419896671
+   (H)    Kinetic....................     226.65923175794
+   (I)  Total two-electron terms.....     232.66772313233
+   (J)    Coulomb....................     266.34274510407
+   (K)    Exchange+Correlation.......     -33.67502197174
+   (L)  Electronic energy............    -388.90784254082  (E+I)
+   (M)  -V/T.........................       2.02177699539  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.66578726789  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.66578726789 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20265
+ LUMO energy:    -0.07992
+ 
+  Orbital energies (hartrees): 
+   -10.28346   -10.28343   -10.27793   -10.27789   -10.27358   -10.27349
+    -0.70441    -0.66577    -0.66023    -0.60255    -0.59348    -0.54625
+    -0.43573    -0.38421    -0.38020    -0.33396    -0.32474    -0.31907
+    -0.25954    -0.20726    -0.20265    -0.07992    -0.07607    -0.01782
+    -0.01205    -0.00268     0.00925     0.07201     0.08290     0.08699
+     0.12356
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.1
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.6
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          1.793364E-07  -1.109836E-03  -1.511256E-01
+    2 C3          6.019618E-08  -1.299507E-01  -7.384170E-02
+    3 C4          1.361294E-07  -1.299482E-01   7.383899E-02
+    4 C5          8.221218E-08  -1.107975E-03   1.511301E-01
+    5 C6          4.710656E-08   1.311756E-01   7.582434E-02
+    6 C7         -1.613596E-07   1.311812E-01  -7.582575E-02
+    7 H7          6.219150E-08  -2.324995E-04   1.088367E-02
+    8 H8         -4.144776E-09   1.245686E-02   6.714160E-03
+    9 H9         -1.295224E-07   1.245353E-02  -6.712360E-03
+   10 H10         6.828436E-08  -2.326653E-04  -1.088795E-02
+   11 H11         2.859294E-08  -1.235696E-02  -6.500449E-03
+   12 H12         9.443815E-08  -1.236069E-02   6.502655E-03
+ -------------   -------------  -------------  -------------
+     total        4.634609E-07  -3.229538E-05   1.072929E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.7
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey= 0.00000 Ez= 0.02400 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.6
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.0
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898868549           5.3E-03  3.8E-02
+etot    2  Y  Y  6  M    -231.42428620448 -2.0E-01  3.0E-03  1.2E-01
+etot    3  N  Y  2  U    -231.66090799977  2.4E-01  5.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.66533854786  4.4E-03  1.9E-04  4.3E-03
+etot    5  Y  Y  6  M    -231.66541435837  7.6E-05  1.3E-04  3.4E-03
+etot    6  N  Y  2  U    -231.66570631918  2.9E-04  5.8E-05  2.1E-03
+etot    7  Y  Y  6  M    -231.66578532864  7.9E-05  1.0E-05  1.7E-04
+etot    8  N  Y  2  U    -231.66577906198 -6.3E-06  6.0E-06  1.8E-04
+etot    9  N  Y  2  U    -231.66577962371  5.6E-07  2.2E-06  5.2E-05
+etot   10  N  N  2  U    -231.66577970071  7.7E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.57556883672
+   (F)    Electron-nuclear...........    -848.16420817994
+   (H)    Kinetic....................     226.65922784431
+   (I)  Total two-electron terms.....     232.66773386307
+   (J)    Coulomb....................     266.34275336786
+   (K)    Exchange+Correlation.......     -33.67501950479
+   (L)  Electronic energy............    -388.90783497365  (E+I)
+   (M)  -V/T.........................       2.02177702361  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.66577970071  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.66577970071 hartrees   iterations:  10
+  
+ 
+ HOMO energy:    -0.20278
+ LUMO energy:    -0.07975
+ 
+  Orbital energies (hartrees): 
+   -10.28424   -10.28109   -10.28108   -10.27521   -10.27521   -10.27294
+    -0.70445    -0.66550    -0.66047    -0.60250    -0.59354    -0.54624
+    -0.43574    -0.38414    -0.38025    -0.33402    -0.32456    -0.31919
+    -0.25956    -0.20711    -0.20278    -0.07975    -0.07625    -0.01791
+    -0.01203    -0.00252     0.00921     0.07178     0.08314     0.08666
+     0.13011
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        4.1  user+sys:        4.1  wallclock:       30.2
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.8
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.405591E-07   9.204885E-07  -1.517317E-01
+    2 C3          8.837404E-08  -1.313709E-01  -7.520817E-02
+    3 C4          5.322987E-08  -1.293965E-01   7.629904E-02
+    4 C5          7.905104E-08   9.994003E-07   1.492923E-01
+    5 C6          3.570278E-08   1.293960E-01   7.630111E-02
+    6 C7         -1.769657E-07   1.313703E-01  -7.520916E-02
+    7 H7          3.761129E-08   4.854810E-07   1.521289E-02
+    8 H8         -1.864664E-08   9.912075E-03   6.461613E-03
+    9 H9         -9.518408E-08   1.004161E-02  -6.141462E-03
+   10 H10         7.357909E-08   5.662383E-07  -1.558567E-02
+   11 H11        -1.037156E-08  -1.004193E-02  -6.140408E-03
+   12 H12         1.266696E-07  -9.912689E-03   6.460734E-03
+ -------------   -------------  -------------  -------------
+     total        4.336089E-07   1.017174E-06   1.111651E-05
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey= 0.00000 Ez=-0.02400 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.0
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898759014           5.3E-03  3.8E-02
+etot    2  Y  Y  6  M    -231.42426200493 -2.0E-01  3.0E-03  1.2E-01
+etot    3  N  Y  2  U    -231.66090764445  2.4E-01  5.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.66533897479  4.4E-03  1.9E-04  4.3E-03
+etot    5  Y  Y  6  M    -231.66541736540  7.8E-05  1.3E-04  3.3E-03
+etot    6  N  Y  2  U    -231.66570588063  2.9E-04  5.8E-05  2.1E-03
+etot    7  Y  Y  6  M    -231.66578538459  8.0E-05  1.0E-05  1.7E-04
+etot    8  N  Y  2  U    -231.66577911826 -6.3E-06  6.0E-06  1.8E-04
+etot    9  N  Y  2  U    -231.66577967985  5.6E-07  2.2E-06  5.2E-05
+etot   10  N  N  2  U    -231.66577975565  7.6E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.57556893718
+   (F)    Electron-nuclear...........    -848.16420857241
+   (H)    Kinetic....................     226.65922808257
+   (I)  Total two-electron terms.....     232.66773390860
+   (J)    Coulomb....................     266.34275337073
+   (K)    Exchange+Correlation.......     -33.67501946213
+   (L)  Electronic energy............    -388.90783502858  (E+I)
+   (M)  -V/T.........................       2.02177702301  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.66577975565  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.66577975565 hartrees   iterations:  10
+  
+ 
+ HOMO energy:    -0.20278
+ LUMO energy:    -0.07975
+ 
+  Orbital energies (hartrees): 
+   -10.28424   -10.28109   -10.28109   -10.27521   -10.27521   -10.27294
+    -0.70445    -0.66550    -0.66047    -0.60250    -0.59354    -0.54624
+    -0.43574    -0.38414    -0.38025    -0.33402    -0.32456    -0.31919
+    -0.25956    -0.20711    -0.20278    -0.07975    -0.07625    -0.01791
+    -0.01203    -0.00252     0.00921     0.07178     0.08314     0.08666
+     0.13011
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        4.1  user+sys:        4.1  wallclock:       30.4
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.5
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          1.696872E-07   7.804262E-07  -1.492927E-01
+    2 C3         -1.490351E-08  -1.293961E-01  -7.629935E-02
+    3 C4          1.717522E-07  -1.313711E-01   7.520789E-02
+    4 C5          1.013834E-07   1.005343E-06   1.517313E-01
+    5 C6          5.620523E-09   1.313708E-01   7.520998E-02
+    6 C7         -8.858028E-08   1.293956E-01  -7.630031E-02
+    7 H7          5.792516E-08   5.099706E-07   1.558578E-02
+    8 H8          4.012086E-08   1.004165E-02   6.141303E-03
+    9 H9         -1.382880E-07   9.912084E-03  -6.461744E-03
+   10 H10         4.673337E-08   4.941631E-07  -1.521290E-02
+   11 H11         5.710085E-08  -9.912708E-03  -6.460574E-03
+   12 H12         1.746354E-08  -1.004190E-02   6.140579E-03
+ -------------   -------------  -------------  -------------
+     total        4.260153E-07   9.888134E-07  -1.083009E-05
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.6
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.01200 Ey= 0.01200 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.4
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        4.9
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898787759           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59168683411 -3.7E-02  1.6E-03  5.1E-02
+etot    3  N  Y  2  U    -231.63976476388  4.8E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64079834454  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64086473975  6.6E-05  8.9E-05  9.3E-04
+etot    6  N  Y  2  U    -231.64099632630  1.3E-04  5.4E-05  2.1E-03
+etot    7  Y  Y  6  M    -231.64108406968  8.8E-05  5.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107940803 -4.7E-06  2.6E-06  6.2E-05
+etot    9  N  N  2  U    -231.64107944853  4.0E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59150432778
+   (F)    Electron-nuclear...........    -848.22380015736
+   (H)    Kinetic....................     226.65337245530
+   (I)  Total two-electron terms.....     232.70836960631
+   (J)    Coulomb....................     266.38521532330
+   (K)    Exchange+Correlation.......     -33.67684571699
+   (L)  Electronic energy............    -388.88313472147  (E+I)
+   (M)  -V/T.........................       2.02191288977  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107944853  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107944853 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20373
+ LUMO energy:    -0.07699
+ 
+  Orbital energies (hartrees): 
+   -10.27932   -10.27923   -10.27656   -10.27655   -10.27424   -10.27420
+    -0.69839    -0.66257    -0.66098    -0.59628    -0.59366    -0.55090
+    -0.43137    -0.38213    -0.38098    -0.32930    -0.32444    -0.32157
+    -0.25517    -0.20506    -0.20373    -0.07699    -0.07586    -0.01396
+    -0.00602     0.00070     0.00675     0.08487     0.08487     0.10261
+     0.14438
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.2
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.2
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2         -1.938559E-03   5.329651E-04  -1.515079E-01
+    2 C3         -1.113006E-03  -1.313654E-01  -7.593220E-02
+    3 C4         -1.112653E-03  -1.313639E-01   7.593207E-02
+    4 C5         -1.939073E-03   5.328480E-04   1.515083E-01
+    5 C6         -2.779483E-03   1.306788E-01   7.492902E-02
+    6 C7         -2.779874E-03   1.306799E-01  -7.492810E-02
+    7 H7          1.948098E-03   1.118488E-04   1.082275E-02
+    8 H8          2.131187E-03   1.000266E-02   5.576346E-03
+    9 H9          2.131022E-03   1.000194E-02  -5.576264E-03
+   10 H10         1.948158E-03   1.119255E-04  -1.082428E-02
+   11 H11         1.733715E-03  -9.950175E-03  -5.660652E-03
+   12 H12         1.733773E-03  -9.950913E-03   5.661088E-03
+ -------------   -------------  -------------  -------------
+     total       -3.669623E-05   2.239551E-05   1.578014E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.6
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex=-0.01200 Ey=-0.01200 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        5.3
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898839803           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59169099547 -3.7E-02  1.6E-03  5.1E-02
+etot    3  N  Y  2  U    -231.63976482662  4.8E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64079850414  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64086472640  6.6E-05  8.9E-05  9.3E-04
+etot    6  N  Y  2  U    -231.64099638491  1.3E-04  5.4E-05  2.1E-03
+etot    7  Y  Y  6  M    -231.64108421019  8.8E-05  5.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107954649 -4.7E-06  2.6E-06  6.2E-05
+etot    9  N  N  2  U    -231.64107958749  4.1E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59149503968
+   (F)    Electron-nuclear...........    -848.22379344170
+   (H)    Kinetic....................     226.65337532122
+   (I)  Total two-electron terms.....     232.70836017926
+   (J)    Coulomb....................     266.38520566171
+   (K)    Exchange+Correlation.......     -33.67684548245
+   (L)  Electronic energy............    -388.88313486042  (E+I)
+   (M)  -V/T.........................       2.02191287617  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107958749  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107958749 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20373
+ LUMO energy:    -0.07699
+ 
+  Orbital energies (hartrees): 
+   -10.27930   -10.27925   -10.27656   -10.27655   -10.27427   -10.27417
+    -0.69839    -0.66257    -0.66098    -0.59628    -0.59366    -0.55090
+    -0.43137    -0.38213    -0.38098    -0.32930    -0.32444    -0.32157
+    -0.25517    -0.20506    -0.20373    -0.07699    -0.07586    -0.01396
+    -0.00602     0.00070     0.00675     0.08486     0.08487     0.10260
+     0.14437
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.4
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.5
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          1.939033E-03  -5.314121E-04  -1.515078E-01
+    2 C3          2.779727E-03  -1.306801E-01  -7.492665E-02
+    3 C4          2.779556E-03  -1.306789E-01   7.492647E-02
+    4 C5          1.939263E-03  -5.310417E-04   1.515082E-01
+    5 C6          1.112824E-03   1.313636E-01   7.593445E-02
+    6 C7          1.112857E-03   1.313650E-01  -7.593346E-02
+    7 H7         -1.948019E-03  -1.107974E-04   1.082276E-02
+    8 H8         -1.733660E-03   9.950343E-03   5.661584E-03
+    9 H9         -1.733760E-03   9.949586E-03  -5.661502E-03
+   10 H10        -1.948043E-03  -1.108186E-04  -1.082424E-02
+   11 H11        -2.131122E-03  -1.000255E-02  -5.575147E-03
+   12 H12        -2.131077E-03  -1.000322E-02   5.575513E-03
+ -------------   -------------  -------------  -------------
+     total        3.757915E-05  -2.030013E-05   1.281273E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.5
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex=-0.01200 Ey= 0.01200 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.4
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.0
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898786662           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59168683001 -3.7E-02  1.6E-03  5.1E-02
+etot    3  N  Y  2  U    -231.63976465239  4.8E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64079824489  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64086464026  6.6E-05  8.9E-05  9.3E-04
+etot    6  N  Y  2  U    -231.64099625612  1.3E-04  5.4E-05  2.1E-03
+etot    7  Y  Y  6  M    -231.64108399923  8.8E-05  5.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107933736 -4.7E-06  2.6E-06  6.2E-05
+etot    9  N  N  2  U    -231.64107937770  4.0E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59150467218
+   (F)    Electron-nuclear...........    -848.22380089057
+   (H)    Kinetic....................     226.65337282647
+   (I)  Total two-electron terms.....     232.70837002155
+   (J)    Coulomb....................     266.38521580426
+   (K)    Exchange+Correlation.......     -33.67684578271
+   (L)  Electronic energy............    -388.88313465063  (E+I)
+   (M)  -V/T.........................       2.02191288787  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107937770  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107937770 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20373
+ LUMO energy:    -0.07699
+ 
+  Orbital energies (hartrees): 
+   -10.27932   -10.27923   -10.27656   -10.27655   -10.27424   -10.27420
+    -0.69839    -0.66257    -0.66098    -0.59628    -0.59366    -0.55090
+    -0.43137    -0.38213    -0.38098    -0.32930    -0.32444    -0.32157
+    -0.25517    -0.20506    -0.20373    -0.07699    -0.07586    -0.01396
+    -0.00602     0.00070     0.00675     0.08487     0.08487     0.10261
+     0.14438
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.6
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.9
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          1.939075E-03   5.329887E-04  -1.515079E-01
+    2 C3          1.113044E-03  -1.313655E-01  -7.593220E-02
+    3 C4          1.112849E-03  -1.313639E-01   7.593209E-02
+    4 C5          1.939292E-03   5.328433E-04   1.515083E-01
+    5 C6          2.779476E-03   1.306787E-01   7.492900E-02
+    6 C7          2.779577E-03   1.306800E-01  -7.492809E-02
+    7 H7         -1.948037E-03   1.118507E-04   1.082273E-02
+    8 H8         -2.131152E-03   1.000265E-02   5.576348E-03
+    9 H9         -2.131251E-03   1.000193E-02  -5.576264E-03
+   10 H10        -1.948050E-03   1.119276E-04  -1.082429E-02
+   11 H11        -1.733674E-03  -9.950170E-03  -5.660647E-03
+   12 H12        -1.733646E-03  -9.950914E-03   5.661083E-03
+ -------------   -------------  -------------  -------------
+     total        3.750269E-05   2.239844E-05   1.681848E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.8
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.01200 Ey=-0.01200 Ez= 0.00000 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.9
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898840900           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59169101019 -3.7E-02  1.6E-03  5.1E-02
+etot    3  N  Y  2  U    -231.63976492963  4.8E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64079859390  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64086481637  6.6E-05  8.9E-05  9.3E-04
+etot    6  N  Y  2  U    -231.64099642745  1.3E-04  5.4E-05  2.1E-03
+etot    7  Y  Y  6  M    -231.64108425213  8.8E-05  5.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107958837 -4.7E-06  2.6E-06  6.2E-05
+etot    9  N  N  2  U    -231.64107962905  4.1E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59149463771
+   (F)    Electron-nuclear...........    -848.22379258958
+   (H)    Kinetic....................     226.65337487671
+   (I)  Total two-electron terms.....     232.70835973572
+   (J)    Coulomb....................     266.38520515346
+   (K)    Exchange+Correlation.......     -33.67684541775
+   (L)  Electronic energy............    -388.88313490199  (E+I)
+   (M)  -V/T.........................       2.02191287833  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107962905  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107962905 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20373
+ LUMO energy:    -0.07699
+ 
+  Orbital energies (hartrees): 
+   -10.27930   -10.27925   -10.27656   -10.27655   -10.27427   -10.27417
+    -0.69839    -0.66257    -0.66098    -0.59628    -0.59366    -0.55090
+    -0.43137    -0.38213    -0.38098    -0.32930    -0.32444    -0.32157
+    -0.25517    -0.20506    -0.20373    -0.07699    -0.07586    -0.01396
+    -0.00602     0.00070     0.00675     0.08486     0.08487     0.10260
+     0.14437
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.9
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        7.5
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2         -1.938621E-03  -5.314203E-04  -1.515078E-01
+    2 C3         -2.779634E-03  -1.306801E-01  -7.492665E-02
+    3 C4         -2.779299E-03  -1.306789E-01   7.492646E-02
+    4 C5         -1.939087E-03  -5.310366E-04   1.515082E-01
+    5 C6         -1.112750E-03   1.313637E-01   7.593448E-02
+    6 C7         -1.113180E-03   1.313650E-01  -7.593347E-02
+    7 H7          1.948124E-03  -1.108007E-04   1.082276E-02
+    8 H8          1.733667E-03   9.950348E-03   5.661580E-03
+    9 H9          1.733518E-03   9.949595E-03  -5.661499E-03
+   10 H10         1.948173E-03  -1.108214E-04  -1.082424E-02
+   11 H11         2.131196E-03  -1.000256E-02  -5.575150E-03
+   12 H12         2.131270E-03  -1.000322E-02   5.575516E-03
+ -------------   -------------  -------------  -------------
+     total       -3.662391E-05  -2.029040E-05   1.160080E-07
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.6
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.01200 Ey= 0.00000 Ez= 0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.4
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        4.2
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898841713           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59106216543 -3.8E-02  1.6E-03  5.3E-02
+etot    3  N  Y  2  U    -231.63977390431  4.9E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64078802033  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64075475666 -3.3E-05  1.5E-04  2.8E-03
+etot    6  N  Y  2  U    -231.64092506026  1.7E-04  7.4E-05  3.0E-03
+etot    7  Y  Y  6  M    -231.64108281366  1.6E-04  8.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107665873 -6.2E-06  4.8E-06  1.3E-04
+etot    9  N  N  2  U    -231.64107699666  3.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59034388158
+   (F)    Electron-nuclear...........    -848.22200567110
+   (H)    Kinetic....................     226.65273577912
+   (I)  Total two-electron terms.....     232.70721161198
+   (J)    Coulomb....................     266.38396620169
+   (K)    Exchange+Correlation.......     -33.67675458971
+   (L)  Electronic energy............    -388.88313226960  (E+I)
+   (M)  -V/T.........................       2.02191576118  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107699666  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107699666 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20392
+ LUMO energy:    -0.07686
+ 
+  Orbital energies (hartrees): 
+   -10.27976   -10.27812   -10.27812   -10.27522   -10.27522   -10.27394
+    -0.69842    -0.66243    -0.66115    -0.59627    -0.59370    -0.55091
+    -0.43140    -0.38203    -0.38112    -0.32937    -0.32430    -0.32172
+    -0.25520    -0.20492    -0.20392    -0.07686    -0.07604    -0.01398
+    -0.00595     0.00051     0.00679     0.08461     0.08509     0.10255
+     0.14543
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.8
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.6
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.1
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2         -9.774687E-04   8.000770E-07  -1.520125E-01
+    2 C3         -1.463530E-03  -1.315093E-01  -7.540861E-02
+    3 C4         -2.426565E-03  -1.304864E-01   7.589692E-02
+    4 C5         -2.900556E-03   9.386148E-07   1.507336E-01
+    5 C6         -2.426662E-03   1.304860E-01   7.589926E-02
+    6 C7         -1.463768E-03   1.315089E-01  -7.540986E-02
+    7 H7          2.156519E-03   5.248821E-07   1.194468E-02
+    8 H8          2.056253E-03   9.344868E-03   5.629751E-03
+    9 H9          1.827988E-03   9.419582E-03  -5.464251E-03
+   10 H10         1.696526E-03   5.710115E-07  -1.196544E-02
+   11 H11         1.828125E-03  -9.420143E-03  -5.463317E-03
+   12 H12         2.056383E-03  -9.345442E-03   5.628931E-03
+ -------------   -------------  -------------  -------------
+     total       -3.675574E-05   8.657610E-07   9.159224E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.3
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex=-0.01200 Ey= 0.00000 Ez=-0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        4.5
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898785849           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59105560480 -3.8E-02  1.6E-03  5.3E-02
+etot    3  N  Y  2  U    -231.63977381697  4.9E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64078779100  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64075429194 -3.3E-05  1.5E-04  2.8E-03
+etot    6  N  Y  2  U    -231.64092502552  1.7E-04  7.4E-05  3.0E-03
+etot    7  Y  Y  6  M    -231.64108259998  1.6E-04  8.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107646933 -6.1E-06  4.8E-06  1.3E-04
+etot    9  N  N  2  U    -231.64107680692  3.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59034529313
+   (F)    Electron-nuclear...........    -848.22200751594
+   (H)    Kinetic....................     226.65273618593
+   (I)  Total two-electron terms.....     232.70721321328
+   (J)    Coulomb....................     266.38396797827
+   (K)    Exchange+Correlation.......     -33.67675476499
+   (L)  Electronic energy............    -388.88313207985  (E+I)
+   (M)  -V/T.........................       2.02191575862  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107680692  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107680692 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20392
+ LUMO energy:    -0.07686
+ 
+  Orbital energies (hartrees): 
+   -10.27976   -10.27812   -10.27812   -10.27522   -10.27522   -10.27394
+    -0.69843    -0.66243    -0.66115    -0.59627    -0.59370    -0.55091
+    -0.43140    -0.38203    -0.38112    -0.32937    -0.32430    -0.32172
+    -0.25520    -0.20492    -0.20392    -0.07686    -0.07604    -0.01398
+    -0.00595     0.00051     0.00679     0.08461     0.08509     0.10255
+     0.14543
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.3
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.9
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.900836E-03   7.715033E-07  -1.507340E-01
+    2 C3          2.426673E-03  -1.304860E-01  -7.589727E-02
+    3 C4          1.463716E-03  -1.315097E-01   7.540832E-02
+    4 C5          9.778287E-04   9.161968E-07   1.520121E-01
+    5 C6          1.463621E-03   1.315094E-01   7.541066E-02
+    6 C7          2.426558E-03   1.304856E-01  -7.589847E-02
+    7 H7         -1.696401E-03   5.278432E-07   1.196550E-02
+    8 H8         -1.828078E-03   9.419596E-03   5.464109E-03
+    9 H9         -2.056378E-03   9.344867E-03  -5.629889E-03
+   10 H10        -2.156434E-03   5.433225E-07  -1.194465E-02
+   11 H11        -2.056227E-03  -9.345450E-03  -5.628760E-03
+   12 H12        -1.828073E-03  -9.420104E-03   5.463481E-03
+ -------------   -------------  -------------  -------------
+     total        3.764272E-05   9.159622E-07  -8.903882E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex=-0.01200 Ey= 0.00000 Ez= 0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.5
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898840616           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59106216886 -3.8E-02  1.6E-03  5.3E-02
+etot    3  N  Y  2  U    -231.63977379323  4.9E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64078793156  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64075467091 -3.3E-05  1.5E-04  2.8E-03
+etot    6  N  Y  2  U    -231.64092498907  1.7E-04  7.4E-05  3.0E-03
+etot    7  Y  Y  6  M    -231.64108273726  1.6E-04  8.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107659159 -6.1E-06  4.8E-06  1.3E-04
+etot    9  N  N  2  U    -231.64107692933  3.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59034452202
+   (F)    Electron-nuclear...........    -848.22200676755
+   (H)    Kinetic....................     226.65273622100
+   (I)  Total two-electron terms.....     232.70721231976
+   (J)    Coulomb....................     266.38396699904
+   (K)    Exchange+Correlation.......     -33.67675467928
+   (L)  Electronic energy............    -388.88313220226  (E+I)
+   (M)  -V/T.........................       2.02191575895  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107692933  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107692933 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20392
+ LUMO energy:    -0.07686
+ 
+  Orbital energies (hartrees): 
+   -10.27976   -10.27812   -10.27812   -10.27522   -10.27522   -10.27394
+    -0.69842    -0.66243    -0.66115    -0.59627    -0.59370    -0.55091
+    -0.43140    -0.38203    -0.38112    -0.32937    -0.32430    -0.32172
+    -0.25520    -0.20492    -0.20392    -0.07686    -0.07604    -0.01398
+    -0.00595     0.00051     0.00679     0.08461     0.08509     0.10255
+     0.14543
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.7
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.8
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          9.779420E-04   8.106503E-07  -1.520125E-01
+    2 C3          1.463660E-03  -1.315093E-01  -7.540861E-02
+    3 C4          2.426729E-03  -1.304864E-01   7.589693E-02
+    4 C5          2.900736E-03   9.312838E-07   1.507336E-01
+    5 C6          2.426716E-03   1.304860E-01   7.589923E-02
+    6 C7          1.463429E-03   1.315089E-01  -7.540985E-02
+    7 H7         -2.156439E-03   5.257009E-07   1.194467E-02
+    8 H8         -2.056266E-03   9.344859E-03   5.629756E-03
+    9 H9         -1.828200E-03   9.419573E-03  -5.464250E-03
+   10 H10        -1.696394E-03   5.736997E-07  -1.196543E-02
+   11 H11        -1.828120E-03  -9.420125E-03  -5.463311E-03
+   12 H12        -2.056160E-03  -9.345439E-03   5.628926E-03
+ -------------   -------------  -------------  -------------
+     total        3.763402E-05   8.672004E-07   9.165431E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.01200 Ey= 0.00000 Ez=-0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.6
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898786946           2.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.59105561235 -3.8E-02  1.6E-03  5.3E-02
+etot    3  N  Y  2  U    -231.63977389263  4.9E-02  2.8E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64078783473  1.0E-03  1.6E-04  6.4E-03
+etot    5  Y  Y  6  M    -231.64075433241 -3.4E-05  1.5E-04  2.8E-03
+etot    6  N  Y  2  U    -231.64092507286  1.7E-04  7.4E-05  3.0E-03
+etot    7  Y  Y  6  M    -231.64108263910  1.6E-04  8.9E-06  1.8E-04
+etot    8  N  Y  2  U    -231.64107650860 -6.1E-06  4.8E-06  1.3E-04
+etot    9  N  N  2  U    -231.64107684633  3.4E-07  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.59034499503
+   (F)    Electron-nuclear...........    -848.22200688403
+   (H)    Kinetic....................     226.65273586431
+   (I)  Total two-electron terms.....     232.70721287577
+   (J)    Coulomb....................     266.38396758842
+   (K)    Exchange+Correlation.......     -33.67675471265
+   (L)  Electronic energy............    -388.88313211926  (E+I)
+   (M)  -V/T.........................       2.02191576019  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64107684633  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64107684633 hartrees   iterations:   9
+  
+ 
+ HOMO energy:    -0.20392
+ LUMO energy:    -0.07686
+ 
+  Orbital energies (hartrees): 
+   -10.27976   -10.27812   -10.27812   -10.27522   -10.27522   -10.27394
+    -0.69843    -0.66243    -0.66115    -0.59627    -0.59370    -0.55091
+    -0.43140    -0.38203    -0.38112    -0.32937    -0.32430    -0.32172
+    -0.25520    -0.20492    -0.20392    -0.07686    -0.07604    -0.01398
+    -0.00595     0.00051     0.00679     0.08461     0.08509     0.10255
+     0.14543
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        3.5  user+sys:        3.5  wallclock:       26.6
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.7
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.3
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2         -2.900414E-03   7.646036E-07  -1.507340E-01
+    2 C3         -2.426664E-03  -1.304860E-01  -7.589727E-02
+    3 C4         -1.463426E-03  -1.315097E-01   7.540831E-02
+    4 C5         -9.776339E-04   9.211453E-07   1.520120E-01
+    5 C6         -1.463589E-03   1.315094E-01   7.541070E-02
+    6 C7         -2.426810E-03   1.304856E-01  -7.589847E-02
+    7 H7          1.696499E-03   5.240481E-07   1.196551E-02
+    8 H8          1.828132E-03   9.419601E-03   5.464104E-03
+    9 H9          2.056117E-03   9.344874E-03  -5.629885E-03
+   10 H10         2.156545E-03   5.416818E-07  -1.194465E-02
+   11 H11         2.056328E-03  -9.345453E-03  -5.628765E-03
+   12 H12         1.828162E-03  -9.420104E-03   5.463485E-03
+ -------------   -------------  -------------  -------------
+     total       -3.675306E-05   9.247853E-07  -8.906606E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey= 0.01200 Ez= 0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.2
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898814594           3.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.54702915726 -8.2E-02  2.0E-03  5.4E-02
+etot    3  N  Y  2  U    -231.64634438235  9.9E-02  3.5E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64771854528  1.4E-03  2.6E-04  5.2E-03
+etot    5  Y  Y  6  M    -231.64722414760 -4.9E-04  2.1E-04  7.3E-03
+etot    6  N  Y  2  U    -231.64813136107  9.1E-04  3.9E-05  6.4E-04
+etot    7  N  Y  2  U    -231.64814654554  1.5E-05  1.4E-05  2.7E-04
+etot    8  N  Y  2  U    -231.64814807138  1.5E-06  6.2E-06  2.0E-04
+etot    9  N  Y  2  U    -231.64814874669  6.8E-07  2.0E-06  2.3E-05
+etot   10  N  N  2  U    -231.64814873340 -1.3E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.58582323263
+   (F)    Electron-nuclear...........    -848.20610438733
+   (H)    Kinetic....................     226.65552042383
+   (I)  Total two-electron terms.....     232.69561922629
+   (J)    Coulomb....................     266.37198782468
+   (K)    Exchange+Correlation.......     -33.67636859840
+   (L)  Electronic energy............    -388.89020400634  (E+I)
+   (M)  -V/T.........................       2.02187190954  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64814873340  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64814873340 hartrees   iterations:  10
+  
+ 
+ HOMO energy:    -0.20342
+ LUMO energy:    -0.07786
+ 
+  Orbital energies (hartrees): 
+   -10.28132   -10.28010   -10.27810   -10.27572   -10.27426   -10.27353
+    -0.70040    -0.66343    -0.66067    -0.59847    -0.59351    -0.54911
+    -0.43283    -0.38271    -0.38071    -0.33115    -0.32442    -0.32047
+    -0.25667    -0.20569    -0.20342    -0.07786    -0.07592    -0.01269
+    -0.01078    -0.00044     0.00791     0.08284     0.08435     0.09327
+     0.13800
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        4.6  user+sys:        4.6  wallclock:       31.7
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        5.8
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.650769E-07   2.863832E-04  -1.518683E-01
+    2 C3          4.900814E-08  -1.315115E-01  -7.568599E-02
+    3 C4          7.054878E-08  -1.308406E-01   7.612823E-02
+    4 C5          8.965819E-08   7.720302E-04   1.506247E-01
+    5 C6          2.320329E-08   1.298251E-01   7.523168E-02
+    6 C7         -1.748483E-07   1.312140E-01  -7.463423E-02
+    7 H7          2.965310E-08   3.705318E-04   1.194110E-02
+    8 H8          7.712561E-10   1.088304E-02   6.461928E-03
+    9 H9         -1.065381E-07   9.494671E-03  -5.145257E-03
+   10 H10         6.416833E-08  -1.710473E-04  -1.195523E-02
+   11 H11        -1.584655E-10  -1.099740E-02  -6.472594E-03
+   12 H12         1.088273E-07  -9.304261E-03   5.382099E-03
+ -------------   -------------  -------------  -------------
+     total        4.193704E-07   2.098498E-05   8.053405E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.2
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey=-0.01200 Ez=-0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..      -0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.5
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898812968           3.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.54702609292 -8.2E-02  2.0E-03  5.4E-02
+etot    3  N  Y  2  U    -231.64634488639  9.9E-02  3.5E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64771914705  1.4E-03  2.6E-04  5.2E-03
+etot    5  Y  Y  6  M    -231.64722458702 -4.9E-04  2.1E-04  7.2E-03
+etot    6  N  Y  2  U    -231.64813167498  9.1E-04  3.9E-05  6.4E-04
+etot    7  N  Y  2  U    -231.64814688084  1.5E-05  1.4E-05  2.7E-04
+etot    8  N  Y  2  U    -231.64814840184  1.5E-06  6.2E-06  2.0E-04
+etot    9  N  Y  2  U    -231.64814907652  6.7E-07  2.0E-06  2.3E-05
+etot   10  N  N  2  U    -231.64814906341 -1.3E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.58582011347
+   (F)    Electron-nuclear...........    -848.20609957461
+   (H)    Kinetic....................     226.65551878816
+   (I)  Total two-electron terms.....     232.69561577712
+   (J)    Coulomb....................     266.37198399576
+   (K)    Exchange+Correlation.......     -33.67636821864
+   (L)  Electronic energy............    -388.89020433634  (E+I)
+   (M)  -V/T.........................       2.02187191812  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64814906341  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64814906341 hartrees   iterations:  10
+  
+ 
+ HOMO energy:    -0.20342
+ LUMO energy:    -0.07786
+ 
+  Orbital energies (hartrees): 
+   -10.28132   -10.28010   -10.27810   -10.27572   -10.27426   -10.27353
+    -0.70040    -0.66343    -0.66067    -0.59847    -0.59351    -0.54911
+    -0.43283    -0.38271    -0.38071    -0.33115    -0.32442    -0.32047
+    -0.25667    -0.20569    -0.20342    -0.07786    -0.07592    -0.01269
+    -0.01078    -0.00044     0.00791     0.08284     0.08435     0.09327
+     0.13799
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        4.6  user+sys:        4.6  wallclock:       31.7
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.1
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          1.878412E-07  -7.703148E-04  -1.506250E-01
+    2 C3          1.510340E-08  -1.298253E-01  -7.522977E-02
+    3 C4          1.623969E-07  -1.312147E-01   7.463275E-02
+    4 C5          8.919559E-08  -2.846480E-04   1.518678E-01
+    5 C6          3.298094E-08   1.315115E-01   7.568803E-02
+    6 C7         -1.430667E-07   1.308399E-01  -7.612978E-02
+    7 H7          6.047955E-08   1.721582E-04   1.195533E-02
+    8 H8          1.827496E-08   1.099723E-02   6.473499E-03
+    9 H9         -1.320422E-07   9.303676E-03  -5.382978E-03
+   10 H10         5.920308E-08  -3.694896E-04  -1.194109E-02
+   11 H11         4.586771E-08  -1.088366E-02  -6.460902E-03
+   12 H12         5.024746E-08  -9.495255E-03   5.144469E-03
+ -------------   -------------  -------------  -------------
+     total        4.464818E-07  -1.892212E-05  -7.715681E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.4
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey=-0.01200 Ez= 0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        4.1
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898867735           3.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.54703386314 -8.2E-02  2.0E-03  5.4E-02
+etot    3  N  Y  2  U    -231.64634488833  9.9E-02  3.5E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64771902257  1.4E-03  2.6E-04  5.2E-03
+etot    5  Y  Y  6  M    -231.64722456318 -4.9E-04  2.1E-04  7.2E-03
+etot    6  N  Y  2  U    -231.64813155599  9.1E-04  3.9E-05  6.4E-04
+etot    7  N  Y  2  U    -231.64814674567  1.5E-05  1.4E-05  2.7E-04
+etot    8  N  Y  2  U    -231.64814827072  1.5E-06  6.2E-06  2.0E-04
+etot    9  N  Y  2  U    -231.64814894558  6.7E-07  2.0E-06  2.3E-05
+etot   10  N  N  2  U    -231.64814893213 -1.3E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.58582141986
+   (F)    Electron-nuclear...........    -848.20610131889
+   (H)    Kinetic....................     226.65551922745
+   (I)  Total two-electron terms.....     232.69561721480
+   (J)    Coulomb....................     266.37198559368
+   (K)    Exchange+Correlation.......     -33.67636837889
+   (L)  Electronic energy............    -388.89020420507  (E+I)
+   (M)  -V/T.........................       2.02187191555  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64814893213  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64814893213 hartrees   iterations:  10
+  
+ 
+ HOMO energy:    -0.20342
+ LUMO energy:    -0.07786
+ 
+  Orbital energies (hartrees): 
+   -10.28132   -10.28010   -10.27810   -10.27572   -10.27426   -10.27353
+    -0.70040    -0.66343    -0.66067    -0.59847    -0.59351    -0.54911
+    -0.43283    -0.38271    -0.38071    -0.33115    -0.32442    -0.32047
+    -0.25667    -0.20569    -0.20342    -0.07786    -0.07592    -0.01269
+    -0.01078    -0.00044     0.00791     0.08284     0.08435     0.09327
+     0.13799
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        4.7  user+sys:        4.7  wallclock:       32.6
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.0
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.150794E-07  -2.847417E-04  -1.518682E-01
+    2 C3          7.600459E-08  -1.312143E-01  -7.463309E-02
+    3 C4          9.465142E-08  -1.298257E-01   7.522947E-02
+    4 C5          8.516425E-08  -7.701329E-04   1.506246E-01
+    5 C6          3.525524E-08   1.308404E-01   7.613060E-02
+    6 C7         -1.728038E-07   1.315110E-01  -7.568722E-02
+    7 H7          4.802616E-08  -3.695010E-04   1.194110E-02
+    8 H8         -1.028347E-08   9.303692E-03   5.382832E-03
+    9 H9         -1.098094E-07   1.099717E-02  -6.473653E-03
+   10 H10         7.007622E-08   1.721891E-04  -1.195528E-02
+   11 H11        -8.150321E-10  -9.495280E-03  -5.144314E-03
+   12 H12         1.126729E-07  -1.088360E-02   6.461050E-03
+ -------------   -------------  -------------  -------------
+     total        4.432184E-07  -1.884461E-05   7.913557E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.3
+  
+  start of program raman
+  
+  calculation with applied electric field of
+     Ex= 0.00000 Ey= 0.01200 Ez=-0.01200 follows...
+  nuclear repulsion energy.......     157.242055273 hartrees
+  nuclear electric field energy..       0.000000000 hartrees
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.4
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.4  user+sys:        0.4  wallclock:        4.2
+  
+  start of program scf
+  
+ number of electrons..........         42
+ number of alpha electrons....         21
+ number of beta electrons.....         21
+ number of orbitals, total....        120
+ number of doubly-occ'd orbs..         21
+ number of open shell orbs....          0
+ number of occupied orbitals..         21
+ number of virtual orbitals...         99
+ number of hamiltonians.......          1
+ number of shells.............          1
+ SCF type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g                   
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  5  M    -231.62898759827           3.6E-03  1.9E-02
+etot    2  Y  Y  6  M    -231.54702135021 -8.2E-02  2.0E-03  5.4E-02
+etot    3  N  Y  2  U    -231.64634420406  9.9E-02  3.5E-04  1.5E-02
+etot    4  Y  Y  6  M    -231.64771851661  1.4E-03  2.6E-04  5.2E-03
+etot    5  Y  Y  6  M    -231.64722404445 -4.9E-04  2.1E-04  7.2E-03
+etot    6  N  Y  2  U    -231.64813132057  9.1E-04  3.9E-05  6.4E-04
+etot    7  N  Y  2  U    -231.64814652242  1.5E-05  1.4E-05  2.7E-04
+etot    8  N  Y  2  U    -231.64814804282  1.5E-06  6.2E-06  2.0E-04
+etot    9  N  Y  2  U    -231.64814870994  6.7E-07  2.0E-06  2.3E-05
+etot   10  N  N  2  U    -231.64814869708 -1.3E-08  0.0E+00  0.0E+00
+  
+  
+ Energy components, in hartrees:
+   (A)  Nuclear repulsion............     157.24205527294
+   (E)  Total one-electron terms.....    -621.58582359979
+   (F)    Electron-nuclear...........    -848.20610515030
+   (H)    Kinetic....................     226.65552080774
+   (I)  Total two-electron terms.....     232.69561962977
+   (J)    Coulomb....................     266.37198827099
+   (K)    Exchange+Correlation.......     -33.67636864122
+   (L)  Electronic energy............    -388.89020397001  (E+I)
+   (M)  -V/T.........................       2.02187190771  (-(A+F+I)/H)
+   (N)  Total energy.................    -231.64814869708  (A+L)
+  
+ SCFE: SCF energy: DFT(b3lyp)      -231.64814869708 hartrees   iterations:  10
+  
+ 
+ HOMO energy:    -0.20342
+ LUMO energy:    -0.07786
+ 
+  Orbital energies (hartrees): 
+   -10.28132   -10.28010   -10.27810   -10.27572   -10.27426   -10.27353
+    -0.70040    -0.66343    -0.66067    -0.59847    -0.59351    -0.54911
+    -0.43283    -0.38271    -0.38071    -0.33115    -0.32442    -0.32047
+    -0.25667    -0.20569    -0.20342    -0.07786    -0.07592    -0.01269
+    -0.01078    -0.00044     0.00791     0.08284     0.08435     0.09327
+     0.13800
+ 
+  Peak memory usage:    743 Mb
+  
+  end of program scf
+   
+ Time(scf)  user:        4.6  user+sys:        4.6  wallclock:       31.1
+  
+  start of program der1a
+  
+  Peak memory usage:    658 Mb
+  
+  end of program der1a
+   
+ Time(der1a)  user:        0.1  user+sys:        0.1  wallclock:        0.5
+  
+  start of program rwr
+  
+  Peak memory usage:    520 Mb
+  
+  end of program rwr
+   
+ Time(rwr)  user:        0.3  user+sys:        0.3  wallclock:        6.2
+  
+  start of program der1b
+  
+   
+  forces (hartrees/bohr) : total     
+   
+ atom  label           x              y              z
+ ---- --------   -------------  -------------  -------------
+    1 C2          2.300872E-07   7.718857E-04  -1.506251E-01
+    2 C3         -6.746191E-09  -1.308402E-01  -7.612854E-02
+    3 C4          1.295121E-07  -1.315119E-01   7.568570E-02
+    4 C5          1.091750E-07   2.865491E-04   1.518679E-01
+    5 C6         -1.453470E-08   1.312144E-01   7.463501E-02
+    6 C7         -1.030627E-07   1.298247E-01  -7.523083E-02
+    7 H7          3.755572E-08  -1.711020E-04   1.195527E-02
+    8 H8          3.341968E-08   9.494654E-03   5.145109E-03
+    9 H9         -1.243902E-07   1.088305E-02  -6.462058E-03
+   10 H10         5.092574E-08   3.705474E-04  -1.194108E-02
+   11 H11         5.492583E-08  -9.304296E-03  -5.381929E-03
+   12 H12         3.083088E-08  -1.099741E-02   6.472778E-03
+ -------------   -------------  -------------  -------------
+     total        4.276984E-07   2.096335E-05  -7.724189E-06
+   
+  Peak memory usage:    737 Mb
+  
+  end of program der1b
+   
+ Time(der1b)  user:        1.6  user+sys:        1.6  wallclock:        5.3
+  
+  start of program raman
+  
+   gradient of polarizability calculations complete...
+  Peak memory usage:    482 Mb
+  
+  end of program raman
+   
+ Time(raman)  user:        0.1  user+sys:        0.1  wallclock:        0.7
+  
+  start of program freq
+  
+   
+  harmonic frequencies in cm**-1, reduced masses in amu,
+  force constants in mDyne/A, and
+  normal modes in cartesian coordinates:
+  IR intensities in km/mol
+  Raman intensities in Angstrom^4
+  
+  frequencies      -878.75  -423.51  -423.23  -379.08  -315.83  -314.38
+  intensities         0.00     0.00     0.00     0.00     0.00     0.00
+  reduc. mass         1.99     2.81     2.81     0.26     0.23     0.23
+  force const         0.90     0.30     0.30     0.02     0.01     0.01
+  Raman Int.          0.97     0.01    12.40     0.00     3.71     0.00
+    C2       X    -0.00000  0.00000 -0.00000  0.06465 -0.04871 -0.00014
+    C2       Y     0.11767  0.16377 -0.00064 -0.00000 -0.00000 -0.00000
+    C2       Z     0.00000  0.00006  0.01523  0.00000 -0.00000 -0.00000
+    C3       X     0.00000 -0.00000  0.00000 -0.06442  0.02423 -0.04210
+    C3       Y    -0.05882 -0.03002 -0.07709 -0.00000 -0.00000 -0.00000
+    C3       Z     0.10188  0.07784  0.11886  0.00000  0.00000 -0.00000
+    C4       X     0.00000  0.00000 -0.00000  0.06442  0.02398  0.04224
+    C4       Y    -0.05882  0.02942 -0.07732 -0.00000  0.00000  0.00000
+    C4       Z    -0.10188  0.07691 -0.11947 -0.00000 -0.00000  0.00000
+    C5       X    -0.00000 -0.00000  0.00000 -0.06465 -0.04871 -0.00015
+    C5       Y     0.11767 -0.16377  0.00064  0.00000  0.00000  0.00000
+    C5       Z    -0.00000 -0.00006 -0.01523 -0.00000 -0.00000 -0.00000
+    C6       X    -0.00000  0.00000 -0.00000  0.06442  0.02423 -0.04209
+    C6       Y    -0.05883  0.03002  0.07709  0.00000 -0.00000 -0.00000
+    C6       Z     0.10188 -0.07784 -0.11886 -0.00000  0.00000 -0.00000
+    C7       X     0.00000 -0.00000  0.00000 -0.06442  0.02398  0.04224
+    C7       Y    -0.05883 -0.02942  0.07732  0.00000  0.00000  0.00000
+    C7       Z    -0.10188 -0.07691  0.11947  0.00000  0.00000  0.00000
+    H7       X    -0.00000 -0.00000  0.00000 -0.34148  0.55213  0.00162
+    H7       Y     0.02351  0.09260 -0.00036  0.00000 -0.00000 -0.00000
+    H7       Z    -0.00000  0.00006  0.01421  0.00000 -0.00000 -0.00000
+    H8       X    -0.00000  0.00000 -0.00000  0.33977 -0.27454  0.47552
+    H8       Y    -0.01189 -0.01295 -0.04605  0.00000 -0.00000  0.00000
+    H8       Z     0.02058  0.04647  0.06613  0.00000  0.00000 -0.00000
+    H9       X    -0.00000 -0.00000  0.00000 -0.33977 -0.27169 -0.47714
+    H9       Y    -0.01189  0.01259 -0.04615 -0.00000  0.00000 -0.00000
+    H9       Z    -0.02058  0.04595 -0.06649 -0.00000 -0.00000 -0.00000
+    H10      X    -0.00000  0.00000 -0.00000  0.34150  0.55213  0.00165
+    H10      Y     0.02351 -0.09260  0.00036 -0.00000 -0.00000  0.00000
+    H10      Z    -0.00000 -0.00005 -0.01421 -0.00000 -0.00000 -0.00000
+    H11      X     0.00000 -0.00000  0.00000 -0.33981 -0.27452  0.47550
+    H11      Y    -0.01189  0.01295  0.04605 -0.00000 -0.00000 -0.00000
+    H11      Z     0.02058 -0.04647 -0.06613 -0.00000  0.00000 -0.00000
+    H12      X    -0.00000  0.00000 -0.00000  0.33980 -0.27171 -0.47713
+    H12      Y    -0.01189 -0.01259  0.04615  0.00000  0.00000  0.00000
+    H12      Z    -0.02058 -0.04596  0.06649  0.00000  0.00000  0.00000
+  
+  frequencies      -231.46   203.49   204.44   318.48   354.26   356.29
+  intensities         0.00     1.41     1.42   165.08     0.00     0.00
+  reduc. mass         1.70     1.49     1.49     0.15     0.26     0.26
+  force const         0.05     0.04     0.04     0.01     0.02     0.02
+  Raman Int.         28.85     0.00     0.42     0.00     8.64     2.08
+    C2       X    -0.00000 -0.00000 -0.00000 -0.03242  0.06847  0.00006
+    C2       Y     0.00000  0.10668  0.00012  0.00000  0.00000 -0.00000
+    C2       Z     0.11298 -0.00013  0.11211 -0.00000  0.00000 -0.00000
+    C3       X     0.00000  0.00000  0.00000 -0.03299  0.03469  0.05962
+    C3       Y     0.09812 -0.05755  0.09474 -0.00000  0.00000 -0.00000
+    C3       Z     0.05633 -0.09470 -0.05209  0.00000 -0.00000  0.00000
+    C4       X    -0.00000  0.00000  0.00000 -0.03299 -0.03479  0.05957
+    C4       Y     0.09812 -0.05733 -0.09488 -0.00000 -0.00000  0.00000
+    C4       Z    -0.05633  0.09482 -0.05187  0.00000  0.00000 -0.00000
+    C5       X     0.00000 -0.00000 -0.00000 -0.03242 -0.06847 -0.00006
+    C5       Y    -0.00000  0.10668  0.00013  0.00000 -0.00000 -0.00000
+    C5       Z    -0.11298 -0.00013  0.11211 -0.00000  0.00000  0.00000
+    C6       X    -0.00000  0.00000  0.00000 -0.03300 -0.03469 -0.05962
+    C6       Y    -0.09811 -0.05755  0.09474  0.00000  0.00000  0.00000
+    C6       Z    -0.05633 -0.09470 -0.05209  0.00000 -0.00000  0.00000
+    C7       X     0.00000 -0.00000  0.00000 -0.03300  0.03479 -0.05956
+    C7       Y    -0.09812 -0.05733 -0.09488  0.00000  0.00000  0.00000
+    C7       Z     0.05633  0.09482 -0.05187 -0.00000 -0.00000  0.00000
+    H7       X     0.00000  0.00000  0.00000  0.38794 -0.52353 -0.00047
+    H7       Y     0.00000  0.17973  0.00021 -0.00000  0.00000 -0.00000
+    H7       Z     0.11438 -0.00013  0.11470 -0.00000  0.00000 -0.00000
+    H8       X    -0.00000 -0.00000 -0.00000  0.39186 -0.26183 -0.45386
+    H8       Y     0.09928 -0.04124  0.12740  0.00000 -0.00000 -0.00000
+    H8       Z     0.05713 -0.12743 -0.10604 -0.00000  0.00000  0.00000
+    H9       X     0.00000 -0.00000 -0.00000  0.39188  0.26258 -0.45342
+    H9       Y     0.09928 -0.04094 -0.12750  0.00000 -0.00000 -0.00000
+    H9       Z    -0.05713  0.12768 -0.10575  0.00000  0.00000 -0.00000
+    H10      X    -0.00000  0.00000  0.00000  0.38798  0.52349  0.00043
+    H10      Y    -0.00000  0.17973  0.00021 -0.00000 -0.00000 -0.00000
+    H10      Z    -0.11437 -0.00013  0.11470 -0.00000  0.00000  0.00000
+    H11      X     0.00000 -0.00000 -0.00000  0.39194  0.26179  0.45383
+    H11      Y    -0.09928 -0.04124  0.12740  0.00000  0.00000  0.00000
+    H11      Z    -0.05713 -0.12743 -0.10604 -0.00000 -0.00000 -0.00000
+    H12      X    -0.00000  0.00000 -0.00000  0.39191 -0.26260  0.45338
+    H12      Y    -0.09928 -0.04094 -0.12750 -0.00000  0.00000  0.00000
+    H12      Z     0.05713  0.12768 -0.10574 -0.00000 -0.00000 -0.00000
+  
+  frequencies       494.65   494.94   525.85   525.93   596.79   729.16
+  intensities         0.00     0.00     0.00     0.00     0.00     0.00
+  reduc. mass         2.51     2.52     2.13     2.14     1.00     1.69
+  force const         0.36     0.36     0.35     0.35     0.21     0.53
+  Raman Int.          0.00     0.00    23.95    17.31     0.67     0.00
+    C2       X     0.00004  0.15947 -0.00000 -0.00000 -0.09880 -0.00000
+    C2       Y    -0.00000  0.00000 -0.00716 -0.00003 -0.00000 -0.00000
+    C2       Z    -0.00000 -0.00000  0.00066 -0.15297 -0.00000  0.11294
+    C3       X    -0.13806 -0.07966 -0.00000  0.00000  0.09855 -0.00000
+    C3       Y    -0.00000  0.00000  0.11627  0.06354  0.00000 -0.09777
+    C3       Z    -0.00000  0.00000  0.06286  0.04391  0.00000 -0.05645
+    C4       X     0.13802 -0.07973  0.00000  0.00000 -0.09855 -0.00000
+    C4       Y     0.00000 -0.00000 -0.11681  0.06254 -0.00000  0.09777
+    C4       Z    -0.00000  0.00000  0.06324 -0.04337  0.00000 -0.05645
+    C5       X     0.00004  0.15947 -0.00000 -0.00000  0.09880 -0.00000
+    C5       Y    -0.00000  0.00000  0.00716  0.00003  0.00000  0.00000
+    C5       Z     0.00000  0.00000 -0.00066  0.15297  0.00000  0.11294
+    C6       X    -0.13806 -0.07966 -0.00000  0.00000 -0.09855 -0.00000
+    C6       Y     0.00000 -0.00000 -0.11627 -0.06354 -0.00000 -0.09777
+    C6       Z     0.00000 -0.00000 -0.06286 -0.04391 -0.00000 -0.05645
+    C7       X     0.13802 -0.07973  0.00000 -0.00000  0.09855  0.00000
+    C7       Y    -0.00000  0.00000  0.11681 -0.06254  0.00000  0.09777
+    C7       Z     0.00000 -0.00000 -0.06324  0.04337 -0.00000 -0.05645
+    H7       X     0.00005  0.16716  0.00000 -0.00000 -0.22155  0.00000
+    H7       Y     0.00000  0.00000 -0.16599 -0.00071 -0.00000  0.00000
+    H7       Z    -0.00000 -0.00000  0.00067 -0.15575 -0.00000  0.11652
+    H8       X    -0.14553 -0.08405 -0.00000  0.00000  0.22306  0.00000
+    H8       Y    -0.00000  0.00000  0.15787 -0.00365  0.00000 -0.10068
+    H8       Z    -0.00000  0.00000 -0.00440  0.16307  0.00000 -0.05858
+    H9       X     0.14549 -0.08413  0.00000  0.00000 -0.22306  0.00000
+    H9       Y     0.00000 -0.00000 -0.15783 -0.00501 -0.00000  0.10068
+    H9       Z    -0.00000 -0.00000 -0.00300 -0.16310 -0.00000 -0.05858
+    H10      X     0.00004  0.16716 -0.00000  0.00000  0.22155  0.00000
+    H10      Y    -0.00000  0.00000  0.16599  0.00071  0.00000  0.00000
+    H10      Z     0.00000  0.00000 -0.00067  0.15575  0.00000  0.11652
+    H11      X    -0.14553 -0.08404 -0.00000  0.00000 -0.22306 -0.00000
+    H11      Y     0.00000 -0.00000 -0.15787  0.00365 -0.00000 -0.10068
+    H11      Z    -0.00000 -0.00000  0.00440 -0.16307 -0.00000 -0.05858
+    H12      X     0.14549 -0.08412  0.00000 -0.00000  0.22306  0.00000
+    H12      Y    -0.00000  0.00000  0.15783  0.00501  0.00000  0.10068
+    H12      Z    -0.00000  0.00000  0.00300  0.16310  0.00000 -0.05858
+  
+  frequencies       816.76   893.28   971.76   972.23   992.07   992.82
+  intensities         0.00     0.00     0.10     0.09     0.00     0.00
+  reduc. mass         0.17     0.17     0.24     0.24     0.22     0.22
+  force const         0.07     0.08     0.13     0.13     0.13     0.13
+  Raman Int.        373.54     0.00     9.59     0.00   186.94    34.61
+    C2       X    -0.00000 -0.00000 -0.00000  0.00000 -0.00000 -0.00000
+    C2       Y    -0.04870 -0.00722 -0.05977  0.00012 -0.03004  0.00001
+    C2       Z    -0.00000 -0.00000 -0.00003 -0.01329 -0.00002 -0.04365
+    C3       X     0.00000 -0.00000  0.00000  0.00000 -0.00000  0.00000
+    C3       Y    -0.02406  0.00340 -0.00512 -0.03153  0.04029  0.00577
+    C3       Z     0.04226 -0.00576  0.03182  0.04152  0.00574  0.03357
+    C4       X     0.00000  0.00000  0.00000 -0.00000  0.00000  0.00000
+    C4       Y     0.02406  0.00340 -0.00498  0.03155 -0.04028  0.00581
+    C4       Z     0.04226  0.00576 -0.03165  0.04165  0.00571 -0.03358
+    C5       X     0.00000 -0.00000 -0.00000 -0.00000  0.00000  0.00000
+    C5       Y     0.04870 -0.00722 -0.05977  0.00012  0.03003 -0.00002
+    C5       Z     0.00000  0.00000 -0.00003 -0.01329  0.00002  0.04365
+    C6       X    -0.00000  0.00000  0.00000  0.00000  0.00000 -0.00000
+    C6       Y     0.02407  0.00340 -0.00511 -0.03153 -0.04028 -0.00577
+    C6       Z    -0.04226 -0.00576  0.03182  0.04152 -0.00575 -0.03357
+    C7       X     0.00000  0.00000  0.00000 -0.00000  0.00000 -0.00000
+    C7       Y    -0.02407  0.00339 -0.00499  0.03155  0.04028 -0.00581
+    C7       Z    -0.04226  0.00576 -0.03165  0.04165 -0.00572  0.03358
+    H7       X     0.00000  0.00000  0.00000 -0.00000  0.00000 -0.00000
+    H7       Y     0.37140  0.40927  0.53188 -0.00103  0.54210 -0.00025
+    H7       Z    -0.00000 -0.00000 -0.00004 -0.02024 -0.00002 -0.05035
+    H8       X    -0.00000  0.00000 -0.00000 -0.00000  0.00000 -0.00000
+    H8       Y     0.18519 -0.20206  0.15047  0.22245 -0.09832  0.25689
+    H8       Z    -0.32017  0.35019 -0.22563 -0.40540  0.25746 -0.39468
+    H9       X     0.00000  0.00000 -0.00000  0.00000 -0.00000 -0.00000
+    H9       Y    -0.18519 -0.20207  0.14955 -0.22307  0.09857  0.25679
+    H9       Z    -0.32017 -0.35019  0.22395 -0.40633  0.25785  0.39443
+    H10      X    -0.00000  0.00000  0.00000  0.00000 -0.00000  0.00000
+    H10      Y    -0.37140  0.40927  0.53192 -0.00114 -0.54205  0.00026
+    H10      Z     0.00000  0.00000 -0.00004 -0.02024  0.00003  0.05035
+    H11      X     0.00000  0.00000 -0.00000 -0.00000 -0.00000  0.00000
+    H11      Y    -0.18520 -0.20207  0.15047  0.22247  0.09829 -0.25687
+    H11      Z     0.32018  0.35020 -0.22562 -0.40546 -0.25740  0.39465
+    H12      X     0.00000 -0.00000  0.00000  0.00000 -0.00000  0.00000
+    H12      Y     0.18519 -0.20207  0.14957 -0.22308 -0.09852 -0.25679
+    H12      Z     0.32018 -0.35019  0.22399 -0.40636 -0.25776 -0.39443
+  
+  frequencies      3359.15  3362.16  3363.20  3363.86  3366.00  3366.10
+  intensities         0.00     0.00     0.00     0.01     0.01     0.00
+  reduc. mass         0.18     0.23     0.18     0.23     0.33     0.35
+  force const         1.17     1.55     1.21     1.55     2.22     2.34
+  Raman Int.         11.34   263.42    60.85     0.00     2.08   594.99
+    C2       X     0.00000  0.00000 -0.00000 -0.00000 -0.00000  0.00000
+    C2       Y     0.00000  0.00065 -0.00000 -0.00116 -0.00000  0.00000
+    C2       Z    -0.02373  0.00000  0.02184 -0.00001  0.05282 -0.05371
+    C3       X    -0.00000 -0.00000  0.00000 -0.00000 -0.00000  0.00000
+    C3       Y     0.03280 -0.03584 -0.03267  0.03500  0.01465 -0.01304
+    C3       Z     0.01870 -0.02031 -0.01941  0.02088  0.00732 -0.00717
+    C4       X     0.00000 -0.00000  0.00000 -0.00000  0.00000  0.00000
+    C4       Y    -0.03280  0.03585 -0.03266  0.03500 -0.01463 -0.01304
+    C4       Z     0.01870 -0.02032  0.01940 -0.02088  0.00731  0.00717
+    C5       X     0.00000  0.00000  0.00000 -0.00000  0.00000  0.00000
+    C5       Y     0.00000 -0.00065 -0.00000 -0.00116 -0.00000 -0.00000
+    C5       Z    -0.02373 -0.00000 -0.02184  0.00000  0.05279  0.05374
+    C6       X    -0.00000 -0.00000 -0.00000  0.00000 -0.00000 -0.00000
+    C6       Y     0.03281  0.03583  0.03270  0.03497  0.01464  0.01305
+    C6       Z     0.01871  0.02031  0.01943  0.02086  0.00732  0.00718
+    C7       X     0.00000  0.00000 -0.00000 -0.00000  0.00000 -0.00000
+    C7       Y    -0.03281 -0.03584  0.03270  0.03497 -0.01464  0.01304
+    C7       Z     0.01871  0.02031 -0.01942 -0.02086  0.00732 -0.00717
+    H7       X    -0.00000 -0.00000  0.00000  0.00000  0.00000 -0.00000
+    H7       Y    -0.00000 -0.00515  0.00000  0.00544  0.00000 -0.00000
+    H7       Z     0.27215 -0.00005 -0.24992  0.00016 -0.61830  0.62720
+    H8       X     0.00000 -0.00000 -0.00000  0.00000  0.00000 -0.00000
+    H8       Y    -0.37862  0.41465  0.38210 -0.41260 -0.16941  0.15475
+    H8       Z    -0.21750  0.23641  0.22493 -0.24135 -0.09248  0.08654
+    H9       X    -0.00000  0.00000 -0.00000  0.00000 -0.00000  0.00000
+    H9       Y     0.37863 -0.41473  0.38206 -0.41261  0.16925  0.15476
+    H9       Z    -0.21750  0.23646 -0.22491  0.24136 -0.09239 -0.08654
+    H10      X    -0.00000 -0.00000 -0.00000  0.00000 -0.00000 -0.00000
+    H10      Y     0.00000  0.00515  0.00000  0.00544  0.00000  0.00000
+    H10      Z     0.27215  0.00004  0.24992 -0.00003 -0.61798 -0.62752
+    H11      X     0.00000  0.00000  0.00000 -0.00000  0.00000  0.00000
+    H11      Y    -0.37867 -0.41459 -0.38252 -0.41220 -0.16934 -0.15487
+    H11      Z    -0.21753 -0.23637 -0.22518 -0.24112 -0.09244 -0.08661
+    H12      X    -0.00000 -0.00000  0.00000  0.00000 -0.00000  0.00000
+    H12      Y     0.37870  0.41467 -0.38245 -0.41222  0.16935 -0.15471
+    H12      Z    -0.21754 -0.23642  0.22514  0.24113 -0.09244  0.08652
+  
+  Number of imaginary frequencies:   7
+   
+  Writing vibrational animation data to benzene_raman_2.vib
+  Writing vibrational spectrum data to benzene_raman_2_vib.spm
+  
+  Thermochemical properties at    1.0000 atm
+  
+  rotational symmetry number:  4
+
+  rotational temperatures (K):      0.155034      0.154997      0.077508
+   
+    7 vibrational frequencies below  10.0 cm-1 not included in zero-point
+  energy or thermochemical analysis.  Set freqcut to change the frequency
+  cutoff value.
+
+  vibrational temperatures:
+       mode:      8        9       10       11       12       13
+  temp. (K):   292.78   294.14   458.22   509.70   512.62   711.69
+   
+       mode:     14       15       16       17       18       19
+  temp. (K):   712.10   756.57   756.70   858.65  1049.10  1175.13
+   
+       mode:     20       21       22       23       24       25
+  temp. (K):  1285.23  1398.14  1398.82  1427.37  1428.44  4833.06
+   
+       mode:     26       27       28       29       30
+  temp. (K):  4837.39  4838.89  4839.83  4842.92  4843.06
+   
+   
+  Thermodynamic properties calculated assuming an ideal gas
+
+  In the table below, the units for temperature
+  are kelvins, the units for U, H, and G are
+  kcal/mol and the units for Cv and S are cal/(mol K)
+
+  The zero point energy (ZPE):     43.779 kcal/mol
+  is not included in U, H, or G in the table below
+
+
+  T =   298.15 K
+   
+              U         Cv          S          H          G        ln(Q)
+          ---------  ---------  ---------  ---------  ---------  ---------
+  trans.      0.889      2.981     38.979      1.481    -10.140   17.11509
+    rot.      0.889      2.981     24.592      0.889     -6.444   10.87539
+    vib.      2.281     17.879     11.801      2.281     -1.237    2.08862
+   elec.      0.000      0.000      0.000      0.000      0.000    0.00000
+   total      4.059     23.841     75.373      4.651    -17.821   30.07909
+   
+  Total internal energy, Utot (SCFE + ZPE + U):    -231.571915 hartrees
+              Total enthalpy, Htot (Utot + pV):    -231.570971 hartrees
+    Total Gibbs free energy, Gtot (Htot - T*S):    -231.606783 hartrees
+   
+  Peak memory usage:    527 Mb
+  
+  end of program freq
+   
+ Time(freq)  user:        0.1  user+sys:        0.1  wallclock:        0.7
+
+ Total cpu seconds     user:     127.869   user+sys:     127.869
+  
+ Total elapsed time:    1683 seconds
+
+Job benzene_raman_2 completed on alcatraz.chem.umass.edu at Wed Feb  4 15:55:30 2015

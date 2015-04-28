@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# generates comma-separated list of raman frequencies and intensities from
+# Gaussian output file.
+
+if [[ $# > 0 ]]
+then
+    egrep '(Frequencies|^ Raman )' $1 | awk '
+    {
+    if ( $1 == "Frequencies"){
+        a = $3
+        b = $4
+        c = $5
+        }
+    else {
+        freqs[a] = $4
+        freqs[b] = $5
+        freqs[c] = $6
+        }
+    }
+    END {
+        print "Frequency,Intensity"
+        for (freq in freqs) {
+            print freq "," freqs[freq] 
+        }
+    }
+    ' | sort -g
+else
+    echo 'Enter a file to parse'
+fi

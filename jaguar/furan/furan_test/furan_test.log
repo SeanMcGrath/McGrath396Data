@@ -1,0 +1,536 @@
+Job furan_test started on node020 at Mon Mar  2 17:10:18 2015
+jobid: volta-0-54f4dfc2 
+Jaguar version 8.5, release  13
+ Running   2 MPI processes
+ Master MPI process running on node020
+  Slave MPI process   1 running on node020
+ Using up to   5 threads per process
+Molecular Point Group: C1      
+Point Group used: C1 (symmetry turned off)
+pre (input checking) done.
+onee (1-electron integrals) done.
+hfig (HF initial guess) done.
+probe (project orbitals) done.
+grid (grid generation) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -229.40876701894           4.4E-03  1.4E-01
+etot    2  Y  Y  6  M    -230.00069606544  5.9E-01  2.9E-03  6.0E-02
+etot    3  Y  Y  6  M    -230.03142812284  3.1E-02  1.8E-03  5.9E-02
+etot    4  N  Y  1  U    -230.06845518156  3.7E-02  8.6E-04  4.3E-02
+etot    5  Y  Y  6  M    -230.08276503767  1.4E-02  3.0E-04  5.0E-03
+etot    6  N  Y  1  U    -230.08307182243  3.1E-04  7.0E-05  1.3E-03
+etot    7  Y  Y  6  M    -230.08307690481  5.1E-06  1.9E-05  8.9E-04
+etot    8  N  Y  1  U    -230.08308704777  1.0E-05  3.0E-06  5.2E-05
+etot    9  N  N  1  U    -230.08308713368  8.6E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+--------gas phase calculation complete----------------------
+ch (properties) done.
+post (output conversion) done.
+pbf (Poisson-Boltzmann solver) done.
+solv (solvation checking) done.
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  1  U    -230.09146717476           4.0E-04  3.4E-03
+etot    2  Y  Y  6  M    -230.09276328615  1.3E-03  1.1E-04  3.4E-03
+etot    3  Y  Y  6  M    -230.09289306017  1.3E-04  4.1E-05  2.2E-03
+etot    4  N  Y  1  U    -230.09191375147 -9.8E-04  1.7E-05  6.1E-04
+etot    5  N  Y  1  U    -230.09191950213  5.8E-06  5.2E-06  1.7E-04
+etot    6  N  Y  1  U    -230.09191974298  2.4E-07  1.4E-06  6.8E-05
+etot    7  N  N  1  U    -230.09191980069  5.8E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+sole (solvation energy) done.
+----------solvation iteration  1 complete------------------
+ch (properties) done.
+post (output conversion) done.
+pbf (Poisson-Boltzmann solver) done.
+solv (solvation checking) done.
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  1  U    -230.09312005772           7.0E-05  6.1E-04
+etot    2  Y  Y  6  M    -230.09414661562  1.0E-03  2.4E-05  9.8E-04
+etot    3  N  Y  1  U    -230.09313011204 -1.0E-03  5.4E-06  2.9E-04
+etot    4  N  Y  1  U    -230.09313092560  8.1E-07  1.9E-06  6.7E-05
+etot    5  N  N  1  U    -230.09313098265  5.7E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+sole (solvation energy) done.
+----------solvation iteration  2 complete------------------
+ch (properties) done.
+post (output conversion) done.
+pbf (Poisson-Boltzmann solver) done.
+solv (solvation checking) done.
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  1  U    -230.09330858968           1.8E-05  1.7E-04
+etot    2  N  Y  1  U    -230.09330820336 -3.9E-07  6.5E-06  3.1E-04
+etot    3  N  Y  1  U    -230.09330909119  8.9E-07  1.1E-06  2.8E-05
+etot    4  N  N  1  U    -230.09330911331  2.2E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+sole (solvation energy) done.
+----final solvation iteration  3 complete------------------
+cutabab2 (abab integrals) done.
+der2a (1-e JK-1st deriv.) done.
+der2b (2-e JK-1st deriv.) done.
+der2nda (1-e 2nd deriv.) done.
+der2ndb (2-e 2nd deriv.) done.
+rwr (Q operators) done.
+cphfa (gradient of wave function) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.09341244097           2.8E-04  9.8E-04
+etot    2  Y  Y  6  M    -230.09340136407 -1.1E-05  1.5E-06  1.9E-05
+etot    3  N  Y  1  U    -230.09330278854 -9.9E-05  1.0E-04  1.0E-03
+etot    4  Y  Y  6  M    -230.09331036446  7.6E-06  2.3E-05  6.5E-04
+etot    5  N  Y  1  U    -230.09330719507 -3.2E-06  1.3E-05  5.7E-04
+etot    6  N  Y  1  U    -230.09330745646  2.6E-07  9.4E-06  5.2E-04
+etot    7  N  Y  1  U    -230.09330767564  2.2E-07  7.3E-06  4.9E-04
+etot    8  N  Y  1  U    -230.09330782708  1.5E-07  6.0E-06  4.6E-04
+etot    9  N  Y  1  U    -230.09330794560  1.2E-07  5.1E-06  4.4E-04
+etot   10  N  Y  1  U    -230.09330804858  1.0E-07  4.5E-06  4.2E-04
+etot   11  N  N  1  U    -230.09330812924  8.1E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    1 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40393345533           2.2E-03  2.8E-02
+etot    2  Y  Y  6  M    -230.41282721460  8.9E-03  6.3E-04  2.5E-02
+etot    3  N  Y  1  U    -230.41762995446  4.8E-03  2.6E-04  7.5E-03
+etot    4  Y  Y  6  M    -230.41843988592  8.1E-04  1.1E-04  1.1E-03
+etot    5  Y  Y  6  M    -230.41845414111  1.4E-05  3.2E-05  8.2E-04
+etot    6  N  Y  1  U    -230.41845346353 -6.8E-07  7.9E-06  1.9E-04
+etot    7  N  Y  1  U    -230.41845353141  6.8E-08  3.6E-06  1.7E-04
+etot    8  N  N  1  U    -230.41845382740  3.0E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    2 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40472834796           2.6E-03  2.8E-02
+etot    2  Y  Y  6  M    -230.40838895333  3.7E-03  9.3E-04  3.6E-02
+etot    3  N  Y  1  U    -230.41843664418  1.0E-02  2.6E-04  7.6E-03
+etot    4  Y  Y  6  M    -230.41924945351  8.1E-04  1.1E-04  1.1E-03
+etot    5  Y  Y  6  M    -230.41926135575  1.2E-05  3.4E-05  8.7E-04
+etot    6  N  Y  1  U    -230.41926048131 -8.7E-07  8.1E-06  1.5E-04
+etot    7  N  Y  1  U    -230.41926054640  6.5E-08  3.4E-06  1.7E-04
+etot    8  N  N  1  U    -230.41926081100  2.6E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    3 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.39620571835           2.9E-03  2.7E-02
+etot    2  Y  Y  6  M    -230.39259845482 -3.6E-03  1.0E-03  4.2E-02
+etot    3  N  Y  1  U    -230.40931603735  1.7E-02  3.1E-04  5.6E-03
+etot    4  Y  Y  6  M    -230.40980342918  4.9E-04  9.7E-05  1.6E-03
+etot    5  Y  Y  6  M    -230.40984161268  3.8E-05  4.5E-05  9.6E-04
+etot    6  N  Y  1  U    -230.40985392103  1.2E-05  7.3E-06  1.7E-04
+etot    7  N  Y  1  U    -230.40985432663  4.1E-07  2.2E-06  6.0E-05
+etot    8  N  N  1  U    -230.40985440766  8.1E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    4 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.41245608495           2.3E-03  2.7E-02
+etot    2  Y  Y  6  M    -230.41651536158  4.1E-03  6.5E-04  2.9E-02
+etot    3  N  Y  1  U    -230.42531849361  8.8E-03  2.5E-04  5.0E-03
+etot    4  Y  Y  6  M    -230.42583826915  5.2E-04  7.7E-05  1.0E-03
+etot    5  Y  Y  6  M    -230.42584717811  8.9E-06  3.1E-05  8.9E-04
+etot    6  N  Y  1  U    -230.42584052318 -6.7E-06  5.0E-06  7.8E-05
+etot    7  N  Y  1  U    -230.42584061078  8.8E-08  1.6E-06  4.5E-05
+etot    8  N  N  1  U    -230.42584064898  3.8E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    5 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40407535413           1.9E-03  1.8E-02
+etot    2  Y  Y  6  M    -230.40832746979  4.3E-03  4.6E-04  1.3E-02
+etot    3  N  Y  1  U    -230.41043640871  2.1E-03  2.6E-04  1.0E-03
+etot    4  Y  Y  6  M    -230.41043816862  1.8E-06  5.2E-05  1.6E-03
+etot    5  Y  Y  6  M    -230.41046466769  2.6E-05  2.1E-05  4.2E-04
+etot    6  N  Y  1  U    -230.41045677991 -7.9E-06  4.0E-06  9.0E-05
+etot    7  N  N  1  U    -230.41045694660  1.7E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    6 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40458644917           1.9E-03  1.8E-02
+etot    2  Y  Y  6  M    -230.40884419143  4.3E-03  4.6E-04  1.3E-02
+etot    3  N  Y  1  U    -230.41094887754  2.1E-03  2.8E-04  1.0E-03
+etot    4  Y  Y  6  M    -230.41095912894  1.0E-05  4.1E-05  1.3E-03
+etot    5  N  Y  1  U    -230.41096539409  6.3E-06  2.5E-05  4.6E-04
+etot    6  N  Y  1  U    -230.41096724208  1.8E-06  3.4E-06  1.1E-04
+etot    7  N  N  1  U    -230.41096746748  2.3E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    7 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40006958684           1.9E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.40021980539  1.5E-04  6.7E-04  2.2E-02
+etot    3  N  Y  1  U    -230.40663060943  6.4E-03  2.3E-04  5.1E-03
+etot    4  Y  Y  6  M    -230.40696372045  3.3E-04  9.4E-05  1.4E-03
+etot    5  Y  Y  6  M    -230.40699362204  3.0E-05  4.9E-05  7.0E-04
+etot    6  N  Y  1  U    -230.40699980921  6.2E-06  7.7E-06  2.0E-04
+etot    7  N  Y  1  U    -230.40700023669  4.3E-07  2.5E-06  8.1E-05
+etot    8  N  N  1  U    -230.40700036426  1.3E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    8 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40859221646           1.7E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.41118325284  2.6E-03  5.0E-04  1.7E-02
+etot    3  N  Y  1  U    -230.41513369355  4.0E-03  2.2E-04  4.8E-03
+etot    4  Y  Y  6  M    -230.41549989697  3.7E-04  7.7E-05  1.1E-03
+etot    5  Y  Y  6  M    -230.41551817423  1.8E-05  4.7E-05  6.8E-04
+etot    6  N  Y  1  U    -230.41551141557 -6.8E-06  7.1E-06  1.9E-04
+etot    7  N  Y  1  U    -230.41551179453  3.8E-07  2.7E-06  9.8E-05
+etot    8  N  N  1  U    -230.41551193911  1.4E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field    9 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40046703316           1.9E-03  1.5E-02
+etot    2  Y  Y  6  M    -230.40097560729  5.1E-04  6.6E-04  2.0E-02
+etot    3  N  Y  1  U    -230.40704865910  6.1E-03  2.3E-04  5.1E-03
+etot    4  Y  Y  6  M    -230.40739686321  3.5E-04  9.4E-05  1.4E-03
+etot    5  Y  Y  6  M    -230.40742665343  3.0E-05  5.1E-05  7.2E-04
+etot    6  N  Y  1  U    -230.40743304158  6.4E-06  8.2E-06  2.0E-04
+etot    7  N  Y  1  U    -230.40743350884  4.7E-07  2.8E-06  8.5E-05
+etot    8  N  N  1  U    -230.40743364055  1.3E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   10 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40819477014           1.9E-03  1.5E-02
+etot    2  Y  Y  6  M    -230.40881306766  6.2E-04  6.6E-04  1.9E-02
+etot    3  N  Y  1  U    -230.41476659427  6.0E-03  2.2E-04  4.8E-03
+etot    4  Y  Y  6  M    -230.41514967581  3.8E-04  7.8E-05  1.2E-03
+etot    5  Y  Y  6  M    -230.41516822282  1.9E-05  4.7E-05  7.1E-04
+etot    6  N  Y  1  U    -230.41516215388 -6.1E-06  7.1E-06  1.9E-04
+etot    7  N  Y  1  U    -230.41516259329  4.4E-07  2.5E-06  1.0E-04
+etot    8  N  N  1  U    -230.41516273945  1.5E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   11 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40400440473           1.6E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.40615498894  2.2E-03  5.2E-04  1.7E-02
+etot    3  N  Y  1  U    -230.40870260082  2.5E-03  2.0E-04  5.9E-03
+etot    4  Y  Y  6  M    -230.40908852226  3.9E-04  1.2E-04  9.9E-04
+etot    5  Y  Y  6  M    -230.40910636599  1.8E-05  2.7E-05  3.6E-04
+etot    6  N  Y  1  U    -230.40910029105 -6.1E-06  9.3E-06  2.3E-04
+etot    7  N  Y  1  U    -230.40910090243  6.1E-07  2.6E-06  1.1E-04
+etot    8  N  N  1  U    -230.40910103062  1.3E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   12 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40465739857           1.6E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.40681236779  2.2E-03  5.2E-04  1.7E-02
+etot    3  N  Y  1  U    -230.40935555325  2.5E-03  2.0E-04  6.0E-03
+etot    4  Y  Y  6  M    -230.40974594261  3.9E-04  1.2E-04  1.0E-03
+etot    5  Y  Y  6  M    -230.40976297652  1.7E-05  3.0E-05  3.7E-04
+etot    6  N  Y  1  U    -230.40975509445 -7.9E-06  8.7E-06  2.1E-04
+etot    7  N  Y  1  U    -230.40975568518  5.9E-07  2.7E-06  1.1E-04
+etot    8  N  N  1  U    -230.40975580114  1.2E-07  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   13 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40440185104           1.6E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.40656411097  2.2E-03  5.3E-04  1.8E-02
+etot    3  N  Y  1  U    -230.40922693477  2.7E-03  2.0E-04  6.0E-03
+etot    4  Y  Y  6  M    -230.40962106913  3.9E-04  1.2E-04  1.0E-03
+etot    5  Y  Y  6  M    -230.40963806830  1.7E-05  2.9E-05  3.9E-04
+etot    6  N  Y  1  U    -230.40963117209 -6.9E-06  7.2E-06  1.8E-04
+etot    7  N  Y  1  U    -230.40963159518  4.2E-07  1.7E-06  4.7E-05
+etot    8  N  N  1  U    -230.40963162106  2.6E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   14 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40425995225           1.6E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.40642173224  2.2E-03  5.3E-04  1.8E-02
+etot    3  N  Y  1  U    -230.40908505858  2.7E-03  2.0E-04  6.0E-03
+etot    4  Y  Y  6  M    -230.40947874183  3.9E-04  1.2E-04  9.9E-04
+etot    5  Y  Y  6  M    -230.40949559746  1.7E-05  2.8E-05  3.9E-04
+etot    6  N  Y  1  U    -230.40948872902 -6.9E-06  8.0E-06  1.7E-04
+etot    7  N  Y  1  U    -230.40948916203  4.3E-07  2.2E-06  6.3E-05
+etot    8  N  N  1  U    -230.40948919671  3.5E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   15 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40014053624           1.8E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.40023108388  9.1E-05  6.1E-04  2.1E-02
+etot    3  N  Y  1  U    -230.40471404918  4.5E-03  2.1E-04  6.3E-03
+etot    4  Y  Y  6  M    -230.40515274206  4.4E-04  1.2E-04  1.1E-03
+etot    5  Y  Y  6  M    -230.40516980133  1.7E-05  3.2E-05  5.6E-04
+etot    6  N  Y  1  U    -230.40517329111  3.5E-06  9.6E-06  2.3E-04
+etot    7  N  Y  1  U    -230.40517382018  5.3E-07  1.6E-06  4.0E-05
+etot    8  N  N  1  U    -230.40517385350  3.3E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   16 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40852126706           1.5E-03  1.4E-02
+etot    2  Y  Y  6  M    -230.41040216359  1.9E-03  4.5E-04  1.7E-02
+etot    3  N  Y  1  U    -230.41304921293  2.6E-03  2.1E-04  6.1E-03
+etot    4  Y  Y  6  M    -230.41351390436  4.6E-04  1.0E-04  9.5E-04
+etot    5  Y  Y  6  M    -230.41352613878  1.2E-05  2.7E-05  5.1E-04
+etot    6  N  Y  1  U    -230.41351236652 -1.4E-05  8.7E-06  2.2E-04
+etot    7  N  Y  1  U    -230.41351291401  5.5E-07  1.5E-06  3.1E-05
+etot    8  N  N  1  U    -230.41351292947  1.5E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   17 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40826571954           1.6E-03  1.3E-02
+etot    2  Y  Y  6  M    -230.40863305540  3.7E-04  5.8E-04  1.9E-02
+etot    3  N  Y  1  U    -230.41258948567  4.0E-03  2.1E-04  6.3E-03
+etot    4  Y  Y  6  M    -230.41307454766  4.9E-04  1.0E-04  1.0E-03
+etot    5  Y  Y  6  M    -230.41308779942  1.3E-05  2.7E-05  5.0E-04
+etot    6  N  Y  1  U    -230.41307346907 -1.4E-05  8.7E-06  2.3E-04
+etot    7  N  Y  1  U    -230.41307404358  5.7E-07  1.4E-06  3.4E-05
+etot    8  N  N  1  U    -230.41307405826  1.5E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+----------------------------------------------------------------
+  calculation with applied electric field   18 of  18 follows...
+raman (gradient of polarizabilities) done.
+rwr (Q operators) done.
+scf type: DFT=Becke_3_Parameter/HF+Slater+Becke88+VWN+LYP (B3LYP)
+  
+       i  u  d  i  g
+       t  p  i  c  r                                 RMS    maximum
+       e  d  i  u  i                       energy  density   DIIS  
+       r  t  s  t  d       total energy    change  change    error 
+  
+etot    1  N  N  4  M    -230.40039608376           1.7E-03  1.3E-02
+etot    2  Y  Y  6  M    -230.40068262202  2.9E-04  6.0E-04  2.0E-02
+etot    3  N  Y  1  U    -230.40476113536  4.1E-03  2.1E-04  6.5E-03
+etot    4  Y  Y  6  M    -230.40521996041  4.6E-04  1.3E-04  1.1E-03
+etot    5  Y  Y  6  M    -230.40523733469  1.7E-05  3.1E-05  5.4E-04
+etot    6  N  Y  1  U    -230.40524068151  3.3E-06  1.1E-05  2.4E-04
+etot    7  N  Y  1  U    -230.40524127088  5.9E-07  2.0E-06  4.3E-05
+etot    8  N  N  1  U    -230.40524130067  3.0E-08  0.0E+00  0.0E+00
+scf (DFT) done.
+der1a (1-e 1st deriv.) done.
+rwr (1st deriv. Q) done.
+der1b (2-e 1st deriv.) done.
+-------------------------------------------------------
+gradient of polarizability calculations complete
+raman (gradient of polarizabilities) done.
+freq (vib. frequencies) done.
+post (output conversion) done.
+Job furan_test completed on node020 at Mon Mar  2 17:22:08 2015
