@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# Script to extract a single cellobiose unit in .com format from Vishal's .trr files.
+
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+
+# Initialize our own variables:
+input_file=""
+temp_file=""
+output_file=""
+frame=5000
+verbose=0
+
+# functions
+show_help () {
+	echo 'usage: trjconv -i INPUT_FILE [-o OUTPUT_FILE] [-f TIME_STEP=5000]'
+}
+
+# Process arguments
+while getopts "h?vi:o:f:" opt; do
+    case "$opt" in
+    h|\?)
+        show_help
+        exit 0
+        ;;
+    v)  verbose=1
+        ;;
+    i)  input_file=$OPTARG
+		temp_file=${input_file%.*}'.pdb'
+		output_file=${input_file%.*}'.com'
+        ;;
+    o)  output_file=$OPTARG
+		;;
+	f)  frame=$OPTARG
+		;;
+    esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+# Check arguments
+if [[ -n $input_file && -f $input_file ]]
+	then
+		trjconv -f $input_file -o $temp_file -b $frame -e $frame
+else
+	echo 'Input file is not valid.'
+	show_help
+	exit 0
+fi
+
