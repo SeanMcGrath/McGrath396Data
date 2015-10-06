@@ -40,7 +40,7 @@ def main(args):
 	try:
 		headers = next(fileReader)
 		data = [(float(row[0]), float(row[1])) for row in fileReader if row[0] not in ['Frequency']]
-	except Exception as e:
+	except:
 		print('{} is not formatted as a comma-separated list of numbers only.'.format(args.file))
 		return 2
 
