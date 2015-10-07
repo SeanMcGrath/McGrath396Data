@@ -6,6 +6,12 @@ from numpy import linspace
 import matplotlib.pyplot as plt, seaborn as sns
 import sys
 
+
+# Constants
+DEFAULT_POINT_COUNT = 10000
+DEFAULT_LORENTZIAN_WIDTH = 20
+DEFAULT_COLOR = 'black'
+
 def lorentzian(x,amp, ctr, width):
     numerator =  (width**2 )
     denominator = ( x - ctr )**2 + width**2
@@ -47,11 +53,8 @@ def main(args):
 	frequencies = [tup[0] for tup in data]
 	intensities = [tup[1] for tup in data]
 
-	xData = linspace(0, max(frequencies), args.points or 10000)
-	if args.color:
-		plt.plot(xData, lorentzianSum(xData, frequencies, intensities, args.width or 20), color=args.color)
-	else:
-		plt.plot(xData, lorentzianSum(xData, frequencies, intensities, args.width or 20))
+	xData = linspace(0, max(frequencies), args.points or DEFAULT_POINT_COUNT)
+	plt.plot(xData, lorentzianSum(xData, frequencies, intensities, args.width or DEFAULT_LORENTZIAN_WIDTH), color=args.color or DEFAULT_COLOR)
 	plt.xlabel(headers[0])
 	plt.ylabel(headers[1])
 	if args.title:
