@@ -14,6 +14,8 @@ verbose=0
 # functions
 show_help () {
 	echo 'usage: trjconv -i INPUT_FILE [-o OUTPUT_FILE] [-f TIME_STEP=5000]'
+	echo ''
+	echo 'Takes .pdb configuration files as input and outputs .com files. TIME_STEP selects the desired femtosecond from which to select a config.'
 }
 
 # Process arguments
