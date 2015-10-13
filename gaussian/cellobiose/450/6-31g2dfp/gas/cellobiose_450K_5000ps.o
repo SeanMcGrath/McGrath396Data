@@ -29,3 +29,9 @@ I will run /usr/local/gaussian/g09/g09 for Gaussian
 Gaussian is using
   /home/srmcgrat/data/gaussian/cellobiose/450/6-31g2dfp/gas/gaussian18085
   on node031 for scratch work.
+
+*****************************************************************************
+ Job Complete
+*****************************************************************************
+No errors detected in output file.
+Gaussian '09 finished on node031 at Sun Oct 11 12:24:46 EDT 2015.
