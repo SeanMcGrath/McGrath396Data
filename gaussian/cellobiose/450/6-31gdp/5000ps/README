@@ -1,5 +1,0 @@
-Simulations of Cellobiose at 450K using 6-31g(d,p) basis set. 
-Using configuration of cellobiose from 5000ps time step of Vishal's MD sim.
-No solvation model - hoping to reduce sim time from ~5 days.
-
-
