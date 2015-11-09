@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+from raman import Spectrum
+from os import putenv
+import sys
+
+putenv('PYTHONINSPECT', 't')
+spectra = [Spectrum.from_csv(csv_file) for csv_file in sys.argv[1:] if csv_file.endswith('.csv')]
+

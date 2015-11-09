@@ -32,7 +32,7 @@ def main(args):
     # Average
     if args.average:
         # Compute lorentzians
-        lorentzians = [spectrum.lorentzian for spectrum in spectra]
+        lorentzians = [spectrum.lorentzian() for spectrum in spectra]
         lorentzians = array(lorentzians)
         average = mean(lorentzians, axis=0)
         max_x = max([spectrum.x_array[-1] for spectrum in spectra])
