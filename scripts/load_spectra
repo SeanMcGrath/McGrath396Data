@@ -1,9 +1,26 @@
 #!/usr/bin/env python
 
-from raman import Spectrum
+import raman
 from os import putenv
+import matplotlib.pyplot as plt
+import seaborn as sns
 import sys
+import re
 
+def find_time(string):
+	match = [item for item in string.split('/') if re.match(r'[0-9]+ps$', item)][0]
+	if match:
+		return match
+	else:
+		return string
+
+# Make script end in interactive mode
 putenv('PYTHONINSPECT', 't')
-spectra = [Spectrum.from_csv(csv_file) for csv_file in sys.argv[1:] if csv_file.endswith('.csv')]
+
+spectra, matrices = {}, {}
+for csv_file in sys.argv[1:]:
+	if 'raman' in csv_file:
+		spectra[find_time(csv_file)] = raman.Spectrum.from_csv(csv_file)
+	if 'matrix' in csv_file:
+		matrices[find_time(csv_file)] = raman.DistanceMatrix.from_csv(csv_file)
 

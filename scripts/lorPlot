@@ -27,7 +27,8 @@ def main(args):
     except:
         print('{} is not a valid Seaborn context.'.format(args.context))
 
-    spectra = [Spectrum.from_csv(csv_file) for csv_file in args.files if csv_file.endswith('.csv')]
+    spectra = [Spectrum.from_csv(csv_file, args.width) for csv_file in args.files if csv_file.endswith('.csv')]
+    ax = plt.gca()
 
     # Average
     if args.average:
@@ -45,7 +46,6 @@ def main(args):
                 legend_entry = [item for item in args.files[i].split('/') if re.match(r'[0-9]+ps$', item)][0]
             except:
                 legend_entry = None
-            ax = plt.gca()
             spectra[i].plot(ax, label=legend_entry)
 
     # Set plot limits and labels
@@ -54,10 +54,10 @@ def main(args):
         plt.ylim(args.limits[2], args.limits[3])
         ax = plt.gca()
         ax.relim()
-        ax.autoscale_view()
+        #ax.autoscale_view()
 
-    #plt.xlabel(headers[0])
-    #plt.ylabel(headers[1])
+    plt.xlabel("Frequency (cm$^{-1}$)")
+    plt.ylabel("Relative Intensity")
     if args.title:
         plt.title(args.title)
 
