@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+
+import raman
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import sys
+import re
+import itertools
+
+# pull out timestamps if available
+def find_time(string):
+    match = [item for item in string.split('/') if re.match(r'[0-9]+ps$', item)][0]
+    if match:
+        return match
+    else:
+        return string
+
+temp = '450K'
+configs = [raman.Configuration.from_log_file(f, find_time(f), temp=temp) \
+    for f in sys.argv[1:]]
+
+distances = []
+spectral_differences = []
+fig = plt.figure()
+ax = fig.add_subplot(111)
+for config_a, config_b in itertools.combinations(configs, 2):
+    try:
+        distance = config_a.matrix.rms_deviation(config_b.matrix)
+    except:
+        continue
+    distances.append(distance)
+    diff_function = lambda x: abs((config_a.spectrum - config_b.spectrum)(x))
+    spectrum_integral = raman.util.integrate_function(
+        diff_function, config_a.spectrum.x_array(x_min=1000, x_max=1500))
+    spectral_differences.append(spectrum_integral)
+    ax.scatter(distance, spectrum_integral)
+    annotation = '{} - {}'.format(config_a.time, config_b.time)
+    ax.annotate(annotation,
+        xy=(distance, spectrum_integral),
+        xytext=(-30,10),
+        textcoords='offset points')
+
+fit = np.polyfit(distances, spectral_differences, 1)
+fit_fn = np.poly1d(fit) 
+
+ax.plot(distances, spectral_differences, 'b.', distances, fit_fn(distances), '--k')
+plt.xlabel('RMS distance matrix deviation (a)')
+plt.ylabel('Integral of spectrum difference')
+plt.title('Effect of deviations in the structure of cellobiose on its raman spectrum')
+plt.show()
