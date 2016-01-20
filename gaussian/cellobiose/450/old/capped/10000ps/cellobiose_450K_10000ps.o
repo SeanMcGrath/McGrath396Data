@@ -1,25 +1,25 @@
-Running Gaussian '09 for srmcgrat on node011
+Running Gaussian '09 for srmcgrat on node031
 ** PBS Information **
   Job name:  acetic
-  Job ID:    21371
+  Job ID:    21492
   Queue:     batch
-  PID:       13616 (g09run)
+  PID:       13221 (g09run)
 \nGaussian will use 64 processor(s) on the following 8 node(s):
-node004
-node005
-node006
-node007
-node008
-node009
-node010
-node011
+node024
+node025
+node026
+node027
+node028
+node029
+node030
+node031
 
 I will run /usr/local/gaussian/g09/g09 for Gaussian
 
 *****************************************************************************
  Running Gaussian '09
  Kernel:            Linux
- Host:              node011
+ Host:              node031
  Kernel release:    2.6.18-164.9.1.el5
  Kernel version:    #1 SMP Tue Dec 15 20:57:57 EST 2009
  Hardware type:     x86_64
@@ -27,15 +27,10 @@ I will run /usr/local/gaussian/g09/g09 for Gaussian
  Platform:          x86_64
  Operating System:  GNU/Linux
 
- Gaussian started on node011 on Thu Oct 22 15:18:00 EDT 2015
+ Gaussian started on node031 on Wed Jan 20 15:45:13 EST 2016
 *****************************************************************************
 
 Gaussian is using
-  /home/srmcgrat/data/gaussian/cellobiose/450/capped/10000ps/gaussian13616
-  on node011 for scratch work.
-
-*****************************************************************************
- Job Complete
-*****************************************************************************
-No errors detected in output file.
-Gaussian '09 finished on node011 at Fri Oct 23 04:16:17 EDT 2015.
+  /home/srmcgrat/thesis/gaussian/cellobiose/450/old/capped/10000ps/gaussian13221
+  on node031 for scratch work.
+Your old log file has been appended to /home/srmcgrat/thesis/gaussian/cellobiose/450/old/capped/10000ps/cellobiose_450K_10000ps.old.log.

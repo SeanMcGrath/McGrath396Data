@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for dir in ./**/*
+do
+	if [ -d $dir ]
+	then
+		cd $dir	
+		if [ -e dft.job ]
+		then
+			qsub dft.job
+		fi
+		cd ../..
+	fi
+done
