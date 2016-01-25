@@ -10,7 +10,7 @@ import itertools
 
 # pull out timestamps if available
 def find_time(string):
-    match = [item for item in string.split('/') if re.match(r'[0-9]+ps$', item)][0]
+    match = [item for item in string.split('/') if re.match(r'.*000.*', item)][0]
     if match:
         return match
     else:

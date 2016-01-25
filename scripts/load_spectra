@@ -17,10 +17,4 @@ def find_time(string):
 # Make script end in interactive mode
 putenv('PYTHONINSPECT', 't')
 
-spectra, matrices = {}, {}
-for csv_file in sys.argv[1:]:
-	if 'raman' in csv_file:
-		spectra[find_time(csv_file)] = raman.Spectrum.from_csv(csv_file)
-	if 'matrix' in csv_file:
-		matrices[find_time(csv_file)] = raman.DistanceMatrix.from_csv(csv_file)
-
+configs = [raman.Configuration.from_log_file(f) for f in sys.argv[1:] if f.endswith('.log')]
