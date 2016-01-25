@@ -3,7 +3,6 @@
 import raman
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 import sys
 import re
 import itertools
@@ -16,8 +15,14 @@ def find_time(string):
     else:
         return string
 
-temp = '450K'
-configs = [raman.Configuration.from_log_file(f, find_time(f), temp=temp) \
+def find_temp(string):
+    match = [item for item in string.split('/') if re.match(r'^[0-9]{3}$', item)][0]
+    if match:
+        return match
+    else:
+        return string
+
+configs = [raman.Configuration.from_log_file(f, find_time(f), temp=find_temp(f)) \
     for f in sys.argv[1:]]
 
 distances = []

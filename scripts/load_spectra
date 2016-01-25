@@ -3,7 +3,6 @@
 import raman
 from os import putenv
 import matplotlib.pyplot as plt
-import seaborn as sns
 import sys
 import re
 
