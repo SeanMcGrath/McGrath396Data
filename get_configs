@@ -3,24 +3,36 @@
 import os
 
 def is_numeric(string):
-	try:
-		float(string)
-		return True
-	except:
-		return False
+    try:
+        float(string)
+        return True
+    except:
+        return False
 
-time_dir = os.path.abspath('new_Aniso')
-config_dir = os.path.abspath('cb_configs')
+cellulose_dir = os.path.abspath('cellulose_configs')
+cellobiose_dir = os.path.abspath('gaussian/cellobiose/')
 
-dirs = [os.path.join(time_dir, dir) \
-	for dir in os.listdir(time_dir) if is_numeric(dir)]
+temp_dirs = [dir for dir in os.listdir(cellulose_dir) if is_numeric(dir)]
 
-for dir in dirs:
-	os.chdir(dir)
-	output_dir = os.path.join(config_dir, dir.split('/')[-1])
-	if not os.path.exists(output_dir):
-		os.makedirs(output_dir)
-	command_template = 'trjconv_d -f traj.trr -o %(d)s/%(t)s.pdb -b %(t)s -e %(t)s'
-	for time in range(5000, 11000, 1000):
-		if not os.path.exists(os.path.join(config_dir, str(time) + '.pdb')):
-			os.system('echo 0 |' + command_template % {'d': output_dir, 't': time})
+os.chdir(cellulose_dir)
+for temp_dir in temp_dirs:
+    os.chdir(temp_dir)
+    for time_file in [f for f in os.listdir() if f.endswith('.com')]:
+        output_dir = os.path.join(cellobiose_dir, temp_dir, time_file.split('.')[0])
+        lines = []
+        with open(time_file) as com_file:
+            lines = com_file.readlines()
+        lines.insert(1, '\n')
+        lines.insert(3, '\n')
+        lines[4] = '0 1\n'
+        # lines = lines[:5] + lines[32:61]
+        lines = lines[:5] + lines[60:89]
+        lines.append('\n')
+
+        if not os.path.exists(os.path.join(output_dir, '2')):
+            os.mkdir(os.path.join(output_dir, '2'))
+
+        with open(os.path.join(output_dir, '2', time_file), 'w') as new_file:
+            [new_file.write(line) for line in lines]
+
+    os.chdir('..')
