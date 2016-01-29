@@ -1,6 +1,6 @@
 # freq=raman b3lyp/6-31+g(d,p) geom=connectivity
 
-	      
+280K 6000ps cellobiose	      
 
 0 1
 O           8.10400         9.17200        21.23400
