@@ -11,6 +11,7 @@ def is_numeric(string):
 
 cellulose_dir = os.path.abspath('cellulose_configs')
 cellobiose_dir = os.path.abspath('gaussian/cellobiose/')
+run_number = '2'
 
 temp_dirs = [dir for dir in os.listdir(cellulose_dir) if is_numeric(dir)]
 
@@ -29,10 +30,10 @@ for temp_dir in temp_dirs:
         lines = lines[:5] + lines[60:89]
         lines.append('\n')
 
-        if not os.path.exists(os.path.join(output_dir, '2')):
-            os.mkdir(os.path.join(output_dir, '2'))
+        if not os.path.exists(os.path.join(output_dir, run_number)):
+            os.mkdir(os.path.join(output_dir, run_number))
 
-        with open(os.path.join(output_dir, '2', time_file), 'w') as new_file:
+        with open(os.path.join(output_dir, run_number, time_file), 'w') as new_file:
             [new_file.write(line) for line in lines]
 
     os.chdir('..')
