@@ -13,7 +13,6 @@ if '-s' in sys.argv or '--stacked' in sys.argv:
 else:
     stacked = False
 
-plt.axis([900, 1250, 0, 35])
 sns.set_context('poster')
 
 y_offset = 0
@@ -22,17 +21,20 @@ for dir in temp_dirs:
     print('entering ' + dir)
     os.chdir(dir)
 
-    spectra = [raman.Configuration.from_log_file(f).spectrum for f in glob('**/*.log')]
+    spectra = [raman.Configuration.from_log_file(f).spectrum for f in glob('**/**/*.log')]
     avg_function = lambda x: sum([s.fit_function(x)/len(spectra) for s in spectra])
     max_x = max([s.x_array()[-1] for s in spectra]) 
     x_array = raman.util.linspace(0, max_x, 10000)
 
-    if !stacked:
+    if not stacked:
         plt.plot(x_array, [avg_function(x) for x in x_array], label=dir + 'K')
+        plt.legend()
+        plt.axis([900, 1250, 0, 35])
     else:
         plt.plot(x_array, [avg_function(x) + y_offset for x in x_array], label=dir + 'K')
+        plt.annotate(dir + 'K', xy = (1000, 2 +  y_offset))
         y_offset += 8
-    plt.legend()
+        plt.axis([900, 1250, 0, 95])
 
     os.chdir('..')
 
