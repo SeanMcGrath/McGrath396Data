@@ -1,0 +1,12 @@
+for file in **/**/1
+do
+	if [ -d $file ]
+	then
+		cd $file
+		mkdir 2dfp	
+		cp *.com 2dfp/
+		cp *.job 2dfp/
+		sed -i 's/g(d,p)/g(2df,p)/g' 2dfp/*
+		cd ../../..
+	fi
+done

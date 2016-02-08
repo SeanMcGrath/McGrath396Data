@@ -1,0 +1,2 @@
+Invalid input file.  File should exist and end in .com or .gjf
+USAGE:  g09run inputfile.gjf  OR  g09run inputfile.com
