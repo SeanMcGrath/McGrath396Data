@@ -16,7 +16,9 @@ else:
 sns.set_context('poster')
 
 y_offset = 0
-temp_dirs = sorted([dir for dir in os.listdir('.') if len(dir) is 3])
+top_dir = os.path.abspath('.')
+#temp_dirs = sorted([dir for dir in os.listdir('.') if len(dir) is 3])
+temp_dirs = ['280']
 for dir in temp_dirs:
     print('entering ' + dir)
     os.chdir(dir)
@@ -36,7 +38,7 @@ for dir in temp_dirs:
         y_offset += 8
         plt.axis([900, 1250, 0, 95])
 
-    os.chdir('..')
+    os.chdir(top_dir)
 
 plt.xlabel('Frequency (cm$^{-1}$)', fontsize=20)
 plt.ylabel('Raman Activity (arb. units)', fontsize=20)
