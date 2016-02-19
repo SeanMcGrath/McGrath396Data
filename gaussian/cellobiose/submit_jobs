@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for dir in ./**/**/*
+for dir in ./**/**/1/*
 do
 	if [ -d $dir ]
 	then
@@ -9,6 +9,6 @@ do
 		then
 			qsub dft.job
 		fi
-		cd ../../..
+		cd ../../../..
 	fi
 done

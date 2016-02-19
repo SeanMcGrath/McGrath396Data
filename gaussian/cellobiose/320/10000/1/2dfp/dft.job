@@ -5,7 +5,7 @@
 
 cd $PBS_O_WORKDIR
 
-g09run 10000.unit.com
+g09run 10000.com
 
 exit 0
 
