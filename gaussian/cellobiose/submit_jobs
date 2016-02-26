@@ -1,14 +1,15 @@
 #!/bin/bash
 
-for dir in ./**/**/2/gdp/*
+TOP=$PWD
+for dir in ./**/**/2/gdp
 do
-	if [ -d $dir ]
+	if [ -d $dir ] 
 	then
 		cd $dir	
 		if [ -e dft.job ] && [ ! -e *.o ]
 		then
 			qsub dft.job
 		fi
-		cd ../../../..
+		cd $TOP
 	fi
 done
