@@ -1,9 +1,9 @@
 Running Gaussian '09 for srmcgrat on node031
 ** PBS Information **
   Job name:  acetic
-  Job ID:    21701
+  Job ID:    21756
   Queue:     batch
-  PID:       16388 (g09run)
+  PID:       18592 (g09run)
 \nGaussian will use 8 processor(s) on the following 1 node(s):
 node031
 
@@ -20,9 +20,15 @@ I will run /usr/local/gaussian/g09/g09 for Gaussian
  Platform:          x86_64
  Operating System:  GNU/Linux
 
- Gaussian started on node031 on Mon Feb  8 13:50:49 EST 2016
+ Gaussian started on node031 on Fri Feb 19 11:07:00 EST 2016
 *****************************************************************************
 
 Gaussian is using
-  /home/srmcgrat/thesis/gaussian/cellobiose/280/10000/1/2dfp/gaussian16388
+  /home/srmcgrat/thesis/gaussian/cellobiose/280/10000/1/2dfp/gaussian18592
   on node031 for scratch work.
+
+*****************************************************************************
+ Job Complete
+*****************************************************************************
+No errors detected in output file.
+Gaussian '09 finished on node031 at Tue Feb 23 11:42:42 EST 2016.
