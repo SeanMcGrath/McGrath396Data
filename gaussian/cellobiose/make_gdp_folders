@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TOP=$PWD
+echo "$TOP"
+for file in **/**/*; do
+	if [[ -d "$file" ]]; then
+		cd "$file"
+		mkdir gdp
+		mv `find -maxdepth 1 -type f` gdp
+		cd "$TOP"
+	fi
+done
