@@ -35,7 +35,7 @@ else:
 
 # loop constants / vars
 y_offset = 0
-log_glob = '**/1/2dfp/*.log'
+log_glob = '**/2/gdp/*.log'
 top_dir = os.path.abspath('.')
 temp_dirs = sorted([dir for dir in os.listdir('.') if len(dir) is 3])
 
