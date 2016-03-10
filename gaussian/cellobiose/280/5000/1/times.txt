@@ -1,0 +1,5 @@
+2dfp,92
+dfp,46
+2dp,31
+dp,13
+no_plus,39
