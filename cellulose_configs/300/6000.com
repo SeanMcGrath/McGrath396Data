@@ -1,8 +1,8 @@
-# freq=raman b3lyp/6-31+g(d,p) geom=connectivity
+# freq=raman b3lyp/6-31+g(2d,p) geom=connectivity
 300 6000.com
-0  0
+300 6000.com
 C           8.01700         7.98700         2.72200
-C           7.59300         9.32800         3.29900
+0 1
 O           7.90800        10.32600         2.31700
 H           7.50800         9.82100         1.55300
 C           8.20800         9.59900         4.66300

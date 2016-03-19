@@ -1,8 +1,8 @@
-#Put Keywords Here, check Charge and Multiplicity.
+# freq=raman b3lyp/6-31+g(2d,p) geom=connectivity
 
- 7000.pdb
+493 7000.com
 
-0  1836020833
+0 1
 C           8.16000         8.12800         2.98500
 C           7.55100         9.41100         3.52600
 O           7.93300        10.47900         2.64700
