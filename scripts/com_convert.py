@@ -10,7 +10,7 @@ def is_numeric(string):
 	except:
 		return False
 
-dirs = [os.path.abspath(dir) for dir in os.listdir('.') if is_numeric(dir)]
+dirs = [os.path.abspath(dir) for dir in os.listdir('.') if is_numeric(dir) and dir.endswith('3')]
 
 for dir in dirs:
 	os.chdir(dir)

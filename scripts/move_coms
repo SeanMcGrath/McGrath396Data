@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+G_DIR=/home/sean/Documents/thesis/gaussian/cellobiose
+
+for temp in *; do
+	cd $temp
+	for com_file in *.com; do
+		echo "$G_DIR"/"$com_file"
+	done
+	cd ..
+done
