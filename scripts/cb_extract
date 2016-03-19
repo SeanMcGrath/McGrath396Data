@@ -15,7 +15,7 @@ verbose=0
 show_help () {
 	echo 'usage: trjconv -i INPUT_FILE [-o OUTPUT_FILE] [-f TIME_STEP=5000]'
 	echo ''
-	echo 'Takes .pdb configuration files as input and outputs .com files. TIME_STEP selects the desired femtosecond from which to select a config.'
+	echo 'Takes .trr configuration files as input and outputs .com files. TIME_STEP selects the desired femtosecond from which to select a config.'
 }
 
 # Process arguments
@@ -28,13 +28,13 @@ while getopts "h?vi:o:f:" opt; do
     v)  verbose=1
         ;;
     i)  input_file=$OPTARG
-		temp_file=${input_file%.*}'.pdb'
-		output_file=${input_file%.*}'.com'
+	temp_file=${input_file%.*}'.pdb'
+	output_file=${input_file%.*}'.com'
         ;;
     o)  output_file=$OPTARG
-		;;
-	f)  frame=$OPTARG
-		;;
+	;;
+    f)  frame=$OPTARG
+	;;
     esac
 done
 
@@ -42,10 +42,12 @@ shift $((OPTIND-1))
 
 [ "$1" = "--" ] && shift
 
+echo "$temp_file"
+
 # Check arguments
-if [[ -n $input_file && -f $input_file ]]
+if [ -f $input_file ]
 	then
-		trjconv -f $input_file -o $temp_file -b $frame -e $frame
+		trjconv -f $input_file -o $output_file -b $frame -e $frame
 else
 	echo 'Input file is not valid.'
 	show_help
