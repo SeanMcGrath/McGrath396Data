@@ -37,7 +37,7 @@ else:
 y_offset = 0
 log_glob = sys.argv[-1]
 top_dir = os.path.abspath('.')
-temp_dirs = sorted([dir for dir in os.listdir('.') if len(dir) is 3])
+temp_dirs = sorted([dir for dir in os.listdir('.') if len(dir) is 3 and dir is not '500'])
 
 # loop over temperature directories
 for dir in temp_dirs:
