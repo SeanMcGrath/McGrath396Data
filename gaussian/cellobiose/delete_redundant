@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TOP=$PWD
+for dir in **/**/1; do
+	cd $dir
+	if [ -e 2dfp/*.o ]; then
+		rm -rf 2dp	
+	fi
+	cd $TOP
+done

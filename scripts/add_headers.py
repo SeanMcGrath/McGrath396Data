@@ -14,7 +14,7 @@ dirs = [os.path.abspath(dir) for dir in os.listdir('.') if is_numeric(dir)]
 
 for dir in dirs:
     os.chdir(dir)
-    files = [f for f in glob('*.com')]
+    files = [f for f in glob('**/*.com')]
     for f in files:
         lines = []
         with open(f) as open_file:
