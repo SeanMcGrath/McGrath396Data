@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for file in **/**/**/**/*.com; do
+    if [[ $(wc -l < "$file" | bc) -ne 97 ]]; then
+       readlink -f $file
+    fi
+done
