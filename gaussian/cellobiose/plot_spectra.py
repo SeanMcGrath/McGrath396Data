@@ -7,6 +7,10 @@ import seaborn as sns
 from glob import glob
 import matplotlib.pyplot as plt
 
+# Constants
+x_scale = 1.017
+y_scale = 10.9167
+
 # plot setup
 sns.set_context('poster')
 sns.set_style('white')
@@ -26,7 +30,7 @@ if infrared:
         axis_range = [900, 1250, 0, 600]
 else:
     y_axis_title = 'Raman'
-    offset_val = 8
+    offset_val = 80
     text_offset = 2
     if stacked:
         axis_range = [900, 1250, 0, 90]
@@ -37,26 +41,29 @@ else:
 y_offset = 0
 log_glob = sys.argv[-1]
 top_dir = os.path.abspath('.')
-temp_dirs = sorted([dir for dir in os.listdir('.') if len(dir) is 3 and dir is not '500'])
+temp_dirs = sorted([dir for dir in os.listdir('.') if dir.endswith('K') and dir[-2] is not '3'])
 
 # loop over temperature directories
 for dir in temp_dirs:
     print('entering ' + dir)
     os.chdir(dir)
-    if infrared:
-        spectra = [gparse.Spectrum.from_log_file(f, type='ir') for f in glob(log_glob)]
-    else:
-        spectra = [gparse.Spectrum.from_log_file(f) for f in glob(log_glob)]
-
+    try:
+        if infrared:
+            spectra = [gparse.Spectrum.from_log_file(f, type='ir') for f in glob(log_glob)]
+        else:
+            spectra = [gparse.Spectrum.from_log_file(f) for f in glob(log_glob)]
+    except ValueError:
+        continue
+       
     avg_function = lambda x: sum([s.fit_function(x)/len(spectra) for s in spectra])
     max_x = max([s.x_array()[-1] for s in spectra]) 
     x_array = gparse.util.linspace(0, max_x, 10000)
 
     if not stacked:
-        plt.plot(x_array, [avg_function(x) for x in x_array], label=dir + 'K')
+        plt.plot(x_array, [avg_function(x)*y_scale for x in x_array], label=dir)
         plt.legend()
     else:
-        plt.plot(x_array, [avg_function(x) + y_offset for x in x_array], label=dir + 'K')
+        plt.plot(x_array, [avg_function(x)*y_scale + y_offset for x in x_array], label=dir)
         plt.annotate(dir + 'K', xy = (1200, text_offset +  y_offset))
         y_offset += offset_val
 
