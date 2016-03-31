@@ -26,3 +26,9 @@ I will run /usr/local/gaussian/g09/g09 for Gaussian
 Gaussian is using
   /home/srmcgrat/thesis/gaussian/cellobiose/483K/9330ps/1/2dp/gaussian10012
   on node008 for scratch work.
+
+*****************************************************************************
+ Job Complete
+*****************************************************************************
+No errors detected in output file.
+Gaussian '09 finished on node008 at Thu Mar 31 00:52:52 EDT 2016.

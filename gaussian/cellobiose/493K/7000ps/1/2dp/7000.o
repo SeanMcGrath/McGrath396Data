@@ -1,0 +1,28 @@
+Running Gaussian '09 for srmcgrat on node016
+** PBS Information **
+  Job name:  acetic
+  Job ID:    22116
+  Queue:     batch
+  PID:       6379 (g09run)
+\nGaussian will use 8 processor(s) on the following 1 node(s):
+node016
+
+I will run /usr/local/gaussian/g09/g09 for Gaussian
+
+*****************************************************************************
+ Running Gaussian '09
+ Kernel:            Linux
+ Host:              node016
+ Kernel release:    2.6.18-164.9.1.el5
+ Kernel version:    #1 SMP Tue Dec 15 20:57:57 EST 2009
+ Hardware type:     x86_64
+ Processor type:    x86_64
+ Platform:          x86_64
+ Operating System:  GNU/Linux
+
+ Gaussian started on node016 on Thu Mar 31 01:38:11 EDT 2016
+*****************************************************************************
+
+Gaussian is using
+  /home/srmcgrat/thesis/gaussian/cellobiose/493K/7000ps/1/2dp/gaussian6379
+  on node016 for scratch work.
