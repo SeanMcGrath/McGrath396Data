@@ -46,10 +46,10 @@ def suplabel(axis,label,label_prop=None,
 
 # Constants
 x_scale = 1.017
-y_scale = 15
+y_scale = 17
 ref_dir = '/home/sean/Documents/thesis/ref_spectra/cotton'
-ref_temps = [f.split('.')[0] for f in os.listdir(ref_dir) if 'K' in f]
-ref_files = [os.path.abspath(os.path.join(ref_dir,f)) for f in os.listdir(ref_dir)]
+ref_temps = [f.split('.')[0] for f in os.listdir(ref_dir) if 'K' in f and 'bak' not in f]
+ref_files = [os.path.abspath(os.path.join(ref_dir,f)) for f in os.listdir(ref_dir) if 'bak' not in f]
 
 # plot setup
 sns.set_context('poster')
@@ -61,13 +61,14 @@ infrared = '-i' in sys.argv or '--infrared' in sys.argv
 
 y_axis_title = 'Raman'
 text_offset = 100
-axis_range = [1050, 1399, 0, 575]
+axis_range = [210, 1650, 0, 1.1]
 
 # loop constants / vars
 log_glob1 = '**/1/2dp/*.log'
 log_glob2 = '**/1/2dfp/*.log'
 top_dir = os.path.abspath('.')
-temp_dirs = sorted([dir for dir in os.listdir('.') if dir in ref_temps]) 
+# temp_dirs = sorted([dir for dir in os.listdir('.') if dir in ref_temps]) 
+temp_dirs = ['350K', '400K', '423K', '473K', '483K']
 
 # loop over temperature directories
 for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-1], temp_dirs):
@@ -79,10 +80,10 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
     with open(ref_file) as ref:
         lines = ref.readlines()
     split_lines = [line.split(',') for line in lines]
-    freqs = [float(line[0]) for line in split_lines if float(line[0]) >= 890 and float(line[0]) <= 1400]
-    intens = [float(line[1]) for line in split_lines if float(line[0]) >= 890 and float(line[0]) <= 1400]
-    min_intens = min(intens)
-    ax.plot(freqs, [i - min_intens for i in intens], color='r')
+    freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
+    intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
+    max_intens = max(intens)
+    ax.plot(freqs, [i/max_intens for i in intens], color='r')
 
     spectra = []
     for f in glob(log_glob1) + glob(log_glob2):
@@ -91,18 +92,20 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
         if 'inished' in lines[-1]:
             spectra.append(gparse.Spectrum.from_log_file(f))
     try:
-        max_x = max([s.x_array()[-1] for s in spectra])
+        max_x = max(freqs)
         avg_function = gparse.Spectrum.average_function(spectra)
         x_array = gparse.util.linspace(0, max_x, 10000)
-        scaled_y = [avg_function(x)*y_scale for x in x_array]
+        y_array = [avg_function(x) for x in x_array]
+        max_y = max(y_array)
 
-        ax.plot([x*x_scale for x in x_array], [y for y in scaled_y], label=dir, color='k')
+        ax.plot([x*x_scale for x in x_array], [y/max_y for y in y_array], label=dir, color='k')
     except Exception as e:
         print(e)
+    finally:
+        os.chdir(top_dir)
     ax.annotate(dir, xy = (1200, text_offset))
     ax.locator_params(axis='y', nbins=2)
-
-    os.chdir(top_dir)
+    
 
 # finish plot
 plt.axis(axis_range)

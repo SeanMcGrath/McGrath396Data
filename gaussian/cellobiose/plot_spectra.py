@@ -35,13 +35,14 @@ else:
     if stacked:
         axis_range = [900, 1250, 0, 90]
     else:
-        axis_range = [900, 1250, 0, 40]
+        axis_range = [900, 1400, 0, 210]
 
 # loop constants / vars
 y_offset = 0
 log_glob = sys.argv[-1]
 top_dir = os.path.abspath('.')
-temp_dirs = sorted([dir for dir in os.listdir('.') if dir.endswith('K') and dir[-2] is not '3'])
+#temp_dirs = sorted([dir for dir in os.listdir('.') if dir.endswith('K')])
+temp_dirs = ['400K', '423K', '473K', '483K'] #['300K', '350K', '400K', '423K', '450K', '473K', '483K', '493K', '500K']
 
 # loop over temperature directories
 for dir in temp_dirs:
@@ -51,23 +52,23 @@ for dir in temp_dirs:
         if infrared:
             spectra = [gparse.Spectrum.from_log_file(f, type='ir') for f in glob(log_glob)]
         else:
-            spectra = [gparse.Spectrum.from_log_file(f) for f in glob(log_glob)]
+           spectra = [gparse.Spectrum.from_log_file(f) for f in glob(log_glob)]
+        avg_function = lambda x: sum([s.fit_function(x)/len(spectra) for s in spectra])
+        max_x = max([s.x_array()[-1] for s in spectra]) 
+        x_array = gparse.util.linspace(0, max_x, 10000)
+
+        if not stacked:
+            plt.plot(x_array, [avg_function(x)*y_scale for x in x_array], label=dir)
+            plt.legend()
+        else:
+            plt.plot(x_array, [avg_function(x)*y_scale + y_offset for x in x_array], label=dir)
+            plt.annotate(dir + 'K', xy = (1200, text_offset +  y_offset))
+            y_offset += offset_val
+
     except ValueError:
-        continue
-       
-    avg_function = lambda x: sum([s.fit_function(x)/len(spectra) for s in spectra])
-    max_x = max([s.x_array()[-1] for s in spectra]) 
-    x_array = gparse.util.linspace(0, max_x, 10000)
-
-    if not stacked:
-        plt.plot(x_array, [avg_function(x)*y_scale for x in x_array], label=dir)
-        plt.legend()
-    else:
-        plt.plot(x_array, [avg_function(x)*y_scale + y_offset for x in x_array], label=dir)
-        plt.annotate(dir + 'K', xy = (1200, text_offset +  y_offset))
-        y_offset += offset_val
-
-    os.chdir(top_dir)
+        pass
+    finally:
+        os.chdir(top_dir)
 
 # finish plot
 plt.axis(axis_range)
