@@ -55,13 +55,9 @@ ref_files = [os.path.abspath(os.path.join(ref_dir,f)) for f in os.listdir(ref_di
 sns.set_context('poster')
 sns.set_style('white')
 
-# get options
-stacked = '-s' in sys.argv or '--stacked' in sys.argv
-infrared = '-i' in sys.argv or '--infrared' in sys.argv
-
 y_axis_title = 'Raman'
 text_offset = 100
-axis_range = [210, 1650, -0.05, 1.1]
+axis_range = [210, 1650, -.05, 1.1]
 
 # loop constants / vars
 log_glob1 = '**/1/2dp/*.log'
@@ -69,50 +65,48 @@ log_glob2 = '**/1/2dfp/*.log'
 top_dir = os.path.abspath('.')
 # temp_dirs = sorted([dir for dir in os.listdir('.') if dir in ref_temps]) 
 temp_dirs = ['350K', '400K', '423K', '473K', '483K']
+x_array = gparse.util.linspace(0, 2000, 10000)
+scaled_x_array = [x*x_scale for x in x_array]
 
 # loop over temperature directories
 for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-1], temp_dirs):
     print('entering ' + dir)
     os.chdir(dir)
 
-    ref_file = [f for f in ref_files if dir in f]
-    ref_file = ref_file[0]
-    with open(ref_file) as ref:
-        lines = ref.readlines()
-    split_lines = [line.split(',') for line in lines]
-    freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
-    intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
-    min_intens = min(intens)
-    intens = [i - min_intens for i in intens]
-    max_intens = max(intens)
-    ax.plot(freqs, [i/max_intens for i in intens], label='Experimental', color='r')
+#    ref_file = [f for f in ref_files if dir in f]
+#    ref_file = ref_file[0]
+#    with open(ref_file) as ref:
+#        lines = ref.readlines()
+#    split_lines = [line.split(',') for line in lines]
+#    freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
+#    intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
+#    min_intens = min(intens)
+#    intens = [i - min_intens for i in intens]
+#    max_intens = max(intens)
+#    ax.plot(freqs, [i/max_intens for i in intens], color='r')
 
-    spectra = []
+    r_spectra = []
+    ir_spectra = []
     for f in glob(log_glob1) + glob(log_glob2):
-        with open(f) as file:
-            lines = file.readlines()
-        if 'inished' in lines[-1]:
-            spectra.append(gparse.Spectrum.from_log_file(f))
-    try:
-        max_x = max(freqs)
-        avg_function = gparse.Spectrum.average_function(spectra)
-        x_array = gparse.util.linspace(0, max_x, 10000)
-        y_array = [avg_function(x) for x in x_array]
-        max_y = max(y_array)
+        r_spectra.append(gparse.Spectrum.from_log_file(f, type='raman'))
+        ir_spectra.append(gparse.Spectrum.from_log_file(f, type='ir'))
+    r_avg_function = gparse.Spectrum.average_function(r_spectra)
+    ir_avg_function = gparse.Spectrum.average_function(ir_spectra)
+    r_array = [r_avg_function(x) for x in x_array]
+    ir_array = [ir_avg_function(x) for x in x_array]
+    max_r = max(r_array)
+    max_ir = max(ir_array)
 
-        ax.plot([x*x_scale for x in x_array], [y/max_y for y in y_array], label='Simulated', color='k')
-    except Exception as e:
-        print(e)
-    finally:
-        os.chdir(top_dir)
+    ax.plot(scaled_x_array, [y/max_r for y in r_array], label='Raman', color='k')
+    ax.plot(scaled_x_array, [y/max_ir for y in ir_array], label='IR', color='b')
     plt.text(0.1, 0.7, dir, horizontalalignment='center', verticalalignment='center', transform=ax.transAxes)
     ax.locator_params(axis='y', nbins=2)
-    
+    os.chdir(top_dir)
 
-plt.gcf().subplots_adjust(hspace=0)
+plt.gcf().subplots_adjust(hspace=0)    
 plt.legend()
 plt.axis(axis_range)
 plt.xlabel('Frequency (cm$^{-1}$)', fontsize=20)
-suplabel('y', y_axis_title + ' Activity (arb. units)')
+suplabel('y', 'Normalized Spectral Intensity (arb. units)')
 
 plt.show()

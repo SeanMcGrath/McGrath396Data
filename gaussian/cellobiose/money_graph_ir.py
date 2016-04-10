@@ -47,7 +47,7 @@ def suplabel(axis,label,label_prop=None,
 # Constants
 x_scale = 1.017
 y_scale = 17
-ref_dir = '/home/sean/Documents/thesis/ref_spectra/cotton'
+ref_dir = '/home/sean/Documents/thesis/ref_spectra/cellobiose/ir/1'
 ref_temps = [f.split('.')[0] for f in os.listdir(ref_dir) if 'K' in f and 'bak' not in f]
 ref_files = [os.path.abspath(os.path.join(ref_dir,f)) for f in os.listdir(ref_dir) if 'bak' not in f]
 
@@ -61,7 +61,7 @@ infrared = '-i' in sys.argv or '--infrared' in sys.argv
 
 y_axis_title = 'Raman'
 text_offset = 100
-axis_range = [210, 1650, -0.05, 1.1]
+axis_range = [600, 4000, 0, 1.1]
 
 # loop constants / vars
 log_glob1 = '**/1/2dp/*.log'
@@ -75,8 +75,7 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
     print('entering ' + dir)
     os.chdir(dir)
 
-    ref_file = [f for f in ref_files if dir in f]
-    ref_file = ref_file[0]
+    ref_file = [f for f in ref_files if dir in f][0]
     with open(ref_file) as ref:
         lines = ref.readlines()
     split_lines = [line.split(',') for line in lines]
@@ -85,18 +84,17 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
     min_intens = min(intens)
     intens = [i - min_intens for i in intens]
     max_intens = max(intens)
-    ax.plot(freqs, [i/max_intens for i in intens], label='Experimental', color='r')
+    ax.plot(freqs, [i/max_intens for i in intens], label='Experiment', color='r')
 
     spectra = []
     for f in glob(log_glob1) + glob(log_glob2):
         with open(f) as file:
             lines = file.readlines()
         if 'inished' in lines[-1]:
-            spectra.append(gparse.Spectrum.from_log_file(f))
+            spectra.append(gparse.Spectrum.from_log_file(f, type='ir'))
     try:
-        max_x = max(freqs)
         avg_function = gparse.Spectrum.average_function(spectra)
-        x_array = gparse.util.linspace(0, max_x, 10000)
+        x_array = gparse.util.linspace(0, 4000, 10000)
         y_array = [avg_function(x) for x in x_array]
         max_y = max(y_array)
 
@@ -105,14 +103,13 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
         print(e)
     finally:
         os.chdir(top_dir)
-    plt.text(0.1, 0.7, dir, horizontalalignment='center', verticalalignment='center', transform=ax.transAxes)
+    plt.text(0.9, 0.7, dir, horizontalalignment='center', verticalalignment='center', transform=ax.transAxes)
     ax.locator_params(axis='y', nbins=2)
     
-
 plt.gcf().subplots_adjust(hspace=0)
-plt.legend()
+plt.legend(loc='upper center')
 plt.axis(axis_range)
 plt.xlabel('Frequency (cm$^{-1}$)', fontsize=20)
-suplabel('y', y_axis_title + ' Activity (arb. units)')
+suplabel('y', 'Normalized Spectral Intensity (arb. units)')
 
 plt.show()
