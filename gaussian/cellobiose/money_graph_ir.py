@@ -47,7 +47,7 @@ def suplabel(axis,label,label_prop=None,
 # Constants
 x_scale = 1.017
 y_scale = 17
-ref_dir = '/home/sean/Documents/thesis/ref_spectra/cellobiose/ir/1'
+ref_dir = '/home/sean/Documents/thesis/ref_spectra/cotton/ir'
 ref_temps = [f.split('.')[0] for f in os.listdir(ref_dir) if 'K' in f and 'bak' not in f]
 ref_files = [os.path.abspath(os.path.join(ref_dir,f)) for f in os.listdir(ref_dir) if 'bak' not in f]
 
@@ -61,7 +61,7 @@ infrared = '-i' in sys.argv or '--infrared' in sys.argv
 
 y_axis_title = 'Raman'
 text_offset = 100
-axis_range = [600, 4000, 0, 1.1]
+axis_range = [600, 1700, -0.05, 1.1]
 
 # loop constants / vars
 log_glob1 = '**/1/2dp/*.log'
@@ -79,8 +79,8 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
     with open(ref_file) as ref:
         lines = ref.readlines()
     split_lines = [line.split(',') for line in lines]
-    freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
-    intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
+    freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200 and float(line[0]) < 1750]
+    intens = [float(line[1]) for line in split_lines if float(line[0]) > 200 and float(line[0]) < 1750]
     min_intens = min(intens)
     intens = [i - min_intens for i in intens]
     max_intens = max(intens)
