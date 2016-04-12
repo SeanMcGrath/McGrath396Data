@@ -44,48 +44,53 @@ def suplabel(axis,label,label_prop=None,
                ha=ha,va=va,
                **label_prop)
 
-# Constants
-x_scale = 1.017
-y_scale = 17
-ref_dir = '/home/sean/Documents/thesis/ref_spectra/cotton'
-ref_temps = [f.split('.')[0] for f in os.listdir(ref_dir) if 'K' in f and 'bak' not in f]
-ref_files = [os.path.abspath(os.path.join(ref_dir,f)) for f in os.listdir(ref_dir) if 'bak' not in f]
-
 # plot setup
-sns.set_context('poster')
-sns.set_style('white')
+sns.set(context='poster', style='white', font_scale=1.2)
 
-# get options
-stacked = '-s' in sys.argv or '--stacked' in sys.argv
-infrared = '-i' in sys.argv or '--infrared' in sys.argv
+cellulose_ref_dir = '/home/sean/Documents/thesis/ref_spectra/cotton'
+cellobiose_ref_dir = '/home/sean/Documents/thesis/ref_spectra/cellobiose'
+cellulose_ref_files = [os.path.abspath(os.path.join(cellulose_ref_dir,f)) for f in os.listdir(cellulose_ref_dir) if 'bak' not in f]
+cellobiose_ref_files = [os.path.abspath(os.path.join(cellobiose_ref_dir,f)) for f in os.listdir(cellobiose_ref_dir) if 'bak' not in f]
 
-y_axis_title = 'Raman'
-text_offset = 100
+x_scale = 1.017
 axis_range = [210, 1650, -0.05, 1.1]
 
-# loop constants / vars
 log_glob1 = '**/1/2dp/*.log'
 log_glob2 = '**/1/2dfp/*.log'
 top_dir = os.path.abspath('.')
-# temp_dirs = sorted([dir for dir in os.listdir('.') if dir in ref_temps]) 
-temp_dirs = ['350K', '400K', '423K', '473K', '483K']
+temp_dirs = ['423K', '473K']
 
 # loop over temperature directories
 for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-1], temp_dirs):
     print('entering ' + dir)
     os.chdir(dir)
 
-    ref_file = [f for f in ref_files if dir in f]
-    ref_file = ref_file[0]
-    with open(ref_file) as ref:
-        lines = ref.readlines()
-    split_lines = [line.split(',') for line in lines]
-    freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
-    intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
-    min_intens = min(intens)
-    intens = [i - min_intens for i in intens]
-    max_intens = max(intens)
-    ax.plot(freqs, [i/max_intens for i in intens], label='Experimental', color='r')
+    ref_file = [f for f in cellulose_ref_files if dir in f]
+    if ref_file:
+        ref_file = ref_file[0]
+        with open(ref_file) as ref:
+            lines = ref.readlines()
+        split_lines = [line.split(',') for line in lines]
+        freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
+        intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
+        min_intens = min(intens)
+        intens = [i - min_intens for i in intens]
+        max_intens = max(intens)
+        ax.plot(freqs, [i/max_intens for i in intens], label='Exp. cellulose', color='b')
+    
+    ref_file = [f for f in cellobiose_ref_files if dir in f]
+    print(ref_file)
+    if len(ref_file):
+        ref_file = ref_file[0]
+        with open(ref_file) as ref:
+            lines = ref.readlines()
+        split_lines = [line.split(',') for line in lines]
+        freqs = [float(line[0]) for line in split_lines if float(line[0]) > 200]
+        intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
+        min_intens = min(intens)
+        intens = [i - min_intens for i in intens]
+        max_intens = max(intens)
+        ax.plot(freqs, [i/max_intens for i in intens], label='Exp. cellobiose', color='r')
 
     spectra = []
     for f in glob(log_glob1) + glob(log_glob2):
@@ -105,14 +110,14 @@ for ax, dir in zip(plt.subplots(len(temp_dirs), sharex=True, sharey=True)[1][::-
         print(e)
     finally:
         os.chdir(top_dir)
-    plt.text(0.1, 0.7, dir, horizontalalignment='center', verticalalignment='center', transform=ax.transAxes)
+    plt.text(0.3, 0.7, dir, horizontalalignment='center', verticalalignment='center', transform=ax.transAxes)
     ax.locator_params(axis='y', nbins=2)
     
 
-plt.gcf().subplots_adjust(hspace=0)
+plt.gcf().subplots_adjust(hspace=0.1)
 plt.legend()
 plt.axis(axis_range)
 plt.xlabel('Frequency (cm$^{-1}$)', fontsize=20)
-suplabel('y', y_axis_title + ' Activity (arb. units)')
+suplabel('y', 'Normalized Spectral Intensity (arb. units)')
 
 plt.show()
