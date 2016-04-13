@@ -2,8 +2,7 @@ import seaborn as sns
 from glob import glob
 from matplotlib import pyplot as plt
 
-sns.set_context('poster')
-sns.set_style('white')
+sns.set(context='poster', style='white', font_scale=1.2)
 
 def parse(f):
     with open(f) as the_file:
