@@ -1,4 +1,4 @@
-#p geom=connectivity and charge check here keywords multiplicity. ut
+#p uff geom=connectivity
 
 10000.pdb
 

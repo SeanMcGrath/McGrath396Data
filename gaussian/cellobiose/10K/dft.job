@@ -5,6 +5,6 @@
 
 cd $PBS_O_WORKDIR
 
-g09run 1.com
+g09run 4.com
 
 exit 0
