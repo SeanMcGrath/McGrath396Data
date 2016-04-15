@@ -35,11 +35,11 @@ def tablepad(items, header=False):
 def atompad(atoms):
     num = str(atoms[0].number).rjust(6)
     element = str(atoms[0].element).rjust(4)
-    padded = num+element
+    padded = num + element
     for atom in atoms:
-        padded += format(atom.x, '.2f').rjust(9)
-        padded += format(atom.y, '.2f').rjust(7)
-        padded += format(atom.z, '.2f').rjust(7)
+        padded += format(atom.eigen_x, '.2f').rjust(9)
+        padded += format(atom.eigen_y, '.2f').rjust(7)
+        padded += format(atom.eigen_z, '.2f').rjust(7)
     return padded
 
 top_dir = os.getcwd()
@@ -68,11 +68,11 @@ for dir in sorted(temp_dirs):
         avg_atoms = []
         for num in sorted(list(set([a.number for a in all_atoms]))):
             atoms_with_num = [a for a in all_atoms if a.number == num]
-            avg_x = avg([a.x for a in atoms_with_num])
-            avg_y = avg([a.y for a in atoms_with_num])
-            avg_z = avg([a.z for a in atoms_with_num])
+            avg_x = avg([a.eigen_x for a in atoms_with_num])
+            avg_y = avg([a.eigen_y for a in atoms_with_num])
+            avg_z = avg([a.eigen_z for a in atoms_with_num])
             avg_atoms.append(gparse.spectrum.Atom(
-                num, atoms_with_num[0].element, avg_x, avg_y, avg_z))
+                num, atoms_with_num[0].element, eigen_x=avg_x, eigen_y=avg_y, eigen_z=avg_z))
         
         avg_peak = gparse.spectrum.SpectralPeak(
             peak_number,
@@ -112,17 +112,5 @@ for dir in sorted(temp_dirs):
             num_atoms = len(avg_peaks[0].atoms)
             for i in range(num_atoms):
                 print(atompad([avg_peaks[j-1].atoms[i] for j in group]), file=outfile)
-
-
-    # print('At {}, the peak at {} is created by peaks #{}'.format(dir, freq, distinct_nums))
-    # print('Most commonly by peak #{} at {}'.format(mode_num, avg_frequency * X_SCALE))
-    # print('Atoms involved:')
-    # print('Atom #\tElement\tEigen sum')
-    # sorted_atoms = sorted([a for a in avg_atoms if a.eigen_sum > 0.02 and a.number < 30],
-    #        key=lambda x: x.eigen_sum, reverse=True)
-    # dominant_atoms += (sorted_atoms[:3])
-    # for atom in sorted_atoms:
-    #     print('{}\t{}\t{}'.format(atom.number, atom.element, atom.eigen_sum))
-    # print()
 
     os.chdir(top_dir)
