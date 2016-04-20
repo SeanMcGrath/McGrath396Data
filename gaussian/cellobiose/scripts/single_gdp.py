@@ -61,7 +61,7 @@ intens = [float(line[1]) for line in split_lines if float(line[0]) > 200]
 min_intens = min(intens)
 intens = [i - min_intens for i in intens]
 max_intens = max(intens)
-plt.plot(freqs, [i for i in intens], label='Experimental', color='r')
+plt.plot(freqs, [i/max_intens for i in intens], label='Experimental', color='r')
 
 spectrum = gparse.Spectrum.from_log_file(sim_file)
 max_x = max(freqs)
@@ -69,7 +69,7 @@ x_array = gparse.util.linspace(0, max_x, 10000)
 y_array = [spectrum.fit_function(x) for x in x_array]
 max_y = max(y_array)
 
-plt.plot(x_array, [y for y in y_array], label='Simulated', color='k')
+plt.plot(x_array, [y/max_y for y in y_array], label='Simulated', color='k')
 
 plt.text(0.1, 0.7, '300K', horizontalalignment='center', verticalalignment='center', transform=plt.gca().transAxes)
 plt.gca().locator_params(axis='y', nbins=2)
